@@ -1,0 +1,72 @@
+<div class="container">
+  <button type="button" class="btn btn-link" (click)="onNavigate('/dashboards/commerse',{})" > < назад </button>
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive">
+          <table class="table table-light table-bordered table-sm table-striped">
+            <thead>
+              <tr>
+                <th class="vert-cell">Газова доба</th>
+                <th class="vert-cell">Всього ЗП</th>
+                <th class="vert-cell">Всього країн</th>
+                <th class="vert-cell inject">ЗП на закачку</th>
+                <th class="vert-cell inject">ЗП на зак.ОС</th>
+                <th class="vert-cell inject">ЗП на зак.МС+Sh</th>
+                <th class="vert-cell inject">РЕЗИДЕНТИ <br>на зак.МС+Sh</th>
+                <th class="vert-cell inject">НЕРЕЗИДЕНТИ <br>на зак.МС+Sh</th>
+                <th class="vert-cell inject">ЗП на зак.МС</th>
+                <th class="vert-cell inject">РЕЗИДЕНТИ <br>на зак.МС</th>
+                <th class="vert-cell inject">НЕРЕЗИДЕНТИ <br>на зак.МС</th>
+                <th class="vert-cell inject">ЗП на зак.Sh</th>
+                <th class="vert-cell inject">РЕЗИДЕНТИ  <br>на зак.Sh</th>
+                <th class="vert-cell inject">НЕРЕЗИДЕНТИ  <br>на зак.Sh</th>
+                <th class="vert-cell withd">ЗП на відбір</th>
+                <th class="vert-cell withd">ЗП на від.ОС</th>
+                <th class="vert-cell withd">ЗП на від.МС+Sh</th>
+                <th class="vert-cell withd">РЕЗИДЕНТИ <br>на від.МС+Sh</th>
+                <th class="vert-cell withd">НЕРЕЗИДЕНТИ <br>на від.МС+Sh</th>
+                <th class="vert-cell withd">ЗП на від.МС</th>
+                <th class="vert-cell withd">РЕЗИДЕНТИ <br>на від.МС</th>
+                <th class="vert-cell withd">НЕРЕЗИДЕНТИ <br>на від.МС</th>
+                <th class="vert-cell withd">ЗП на від.Sh</th>
+                <th class="vert-cell withd">РЕЗИДЕНТИ <br>на від.Sh</th>
+                <th class="vert-cell withd">НЕРЕЗИДЕНТИ <br>на від.Sh</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of rows; index as i">
+                <td>{{row[0]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td class="inject">{{row[4]}}</td>
+                <td class="inject">{{row[5]}}</td>
+                <td class="inject">{{row[6]}}</td>
+                <td class="inject">{{row[7]}}</td>
+                <td class="inject">{{row[8]}}</td>
+                <td class="inject">{{row[9]}}</td>
+                <td class="inject">{{row[10]}}</td>
+                <td class="inject">{{row[11]}}</td>
+                <td class="inject">{{row[12]}}</td>
+                <td class="inject">{{row[13]}}</td>
+                <td class="inject">{{row[14]}}</td>
+                <td class="withd">{{row[15]}}</td>
+                <td class="withd">{{row[16]}}</td>
+                <td class="withd">{{row[17]}}</td>
+                <td class="withd">{{row[18]}}</td>
+                <td class="withd">{{row[19]}}</td>
+                <td class="withd">{{row[20]}}</td>
+                <td class="withd">{{row[21]}}</td>
+                <td class="withd">{{row[22]}}</td>
+                <td class="withd">{{row[23]}}</td>
+                <td class="withd">{{row[24]}}</td>
+                <td class="withd">{{row[25]}}</td>
+
+            </tr>
+            </tbody>
+          </table>
+        </div>    
+      </div>
+    </div>
+    <button type="button" class="btn btn-link" (click)="onNavigate('/dashboards/commerse',{})" > < назад </button>
+</div>
+ 

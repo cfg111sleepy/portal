@@ -1,0 +1,33 @@
+
+<main class="form-signin">
+  <form>
+    
+    <h1 class="h3 mb-3 fw-normal">ДІСП</h1>
+    
+    <h1 class="h3 mb-3 fw-normal">Вхід до системи</h1>
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="username" name="username">
+      <label for="floatingInput">користувач</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="password" name="password">
+      <label for="floatingPassword">пароль</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Не користувач домену
+      </label>
+    </div>
+    <input class="w-100 btn btn-lg btn-primary" type="button" (click)="onLogin()" value="Вхід">
+
+    <div *ngIf="errorMsg"  class="my-2 p-2 bg-danger text-white rounded-2">
+      Помилка входу! <br> Перевірте обікові дані та розкладку клавіатури
+    </div>
+
+  </form> 
+</main>
+
+
+ 

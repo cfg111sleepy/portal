@@ -1,0 +1,42 @@
+<table class="table table-sm table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Година</th>
+            <th>Д-3<br>{{gasDay_3.toLocaleDateString()}}<br>тис м&#179;</th>
+            <th>Д-2<br>{{gasDay_2.toLocaleDateString()}}<br>тис м&#179;</th>
+            <th>Д-1<br>{{gasDay_1.toLocaleDateString()}}<br>тис м&#179;</th>
+            <th>Д<br>{{currentGasDay.toLocaleDateString()}}<br>тис м&#179;</th>
+            <th>Коеф</th>
+            <th>Прогноз<br>тис м&#179;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rows">
+            <td>{{row.hour}}</td>
+            <td>{{row.d_3s}}</td>
+            <td>{{row.d_2s}}</td>
+            <td>{{row.d_1s}}</td>
+            <td>{{row.ds}}</td>
+            <td>{{row.ks}}</td>
+            <td>{{row.d_f}}</td>
+        </tr>
+        <tr class="table-warning">
+            <td>{{totals?.hour}}</td>
+            <td>{{totals?.d_3s}}</td>
+            <td>{{totals?.d_2s}}</td>
+            <td>{{totals?.d_1s}}</td>
+            <td>{{totals?.ds}}</td>
+            <td>{{totals?.ks}}</td>
+            <td>{{totals?.d_f}}</td>
+        </tr>
+        <tr>
+            <td>{{totals1?.hour}}</td>
+            <td>{{totals1?.d_3s}}</td>
+            <td>{{totals1?.d_2s}}</td>
+            <td>{{totals1?.d_1s}}</td>
+            <td>{{totals1?.ds}}</td>
+            <td></td>
+            <td>{{totals1?.d_f}}</td>
+        </tr>
+    </tbody>
+</table>

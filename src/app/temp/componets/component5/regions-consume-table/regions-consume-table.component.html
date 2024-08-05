@@ -1,0 +1,18 @@
+<table class="table table-sm table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Регіон</th>
+            <th>Д-3<br>{{gasDay_3.toLocaleDateString()}}<br>тис м&#179;</th>
+            <th>Д-2<br>{{gasDay_2.toLocaleDateString()}}<br>тис м&#179;</th>
+            <th>Д-1<br>{{gasDay_1.toLocaleDateString()}}<br>тис м&#179;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rows; let i=index" [class.table-warning]="i==selectedRegion">
+            <td><a [routerLink]="[]" (click)="clickRegion(i)">{{row.name}}</a></td>
+            <td>{{row.d_3s}}</td>
+            <td>{{row.d_2s}}</td>
+            <td>{{row.d_1s}}</td>
+        </tr>
+    </tbody>
+</table>

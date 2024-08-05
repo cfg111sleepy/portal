@@ -1,0 +1,7 @@
+<svg>
+  <g >
+    <rect [attr.x]="x" [attr.y]="y" [attr.width]="w" [attr.height]="h" stroke="grey" stroke-width="1" fill="SeaShell" />
+    <rect [attr.x]="x" [attr.y]="y" [attr.width]="scaledValue" [attr.height]="h" [attr.fill]="fillColor"/>
+    <text [attr.x]="x + 10" [attr.y]="y" dx="0" dy="15" fill="black">{{value}}</text>  
+  </g>
+</svg>

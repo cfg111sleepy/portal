@@ -1,0 +1,29 @@
+.parameter {
+    border-radius: 0.5em;
+    background-color: rgb(199, 209, 216);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    min-height: 50px;
+    margin: 5px;
+}
+
+.parameter-instant {
+    text-align: center;
+    color: rgb(0, 89, 168);
+}
+.parameter-month {
+    text-align: center;
+    color: rgb(69, 149, 52);
+}
+.parameter-year {
+    text-align: center;
+    color: rgb(155, 23, 45);
+}
+
+.parameter-label {
+    text-align: center;
+    font-size: 0.7em;
+    color: black;
+    font-weight: normal;
+}

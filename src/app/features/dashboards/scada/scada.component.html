@@ -1,0 +1,701 @@
+<div class="row">
+
+    <div class="col-xxl-2  col-lg-3  col-sm-12 col-xs-12">
+      <div class="card">
+        <table class="table table-borderless table-sm  align-middle">
+            <tbody>
+
+            <tr>
+                <th class="text-white" colspan="2">РОБОТИ</th>
+            </tr>
+            <tr class='row-condesed'>
+                <td></td>
+                <td class="text-end">кількість</td>
+            </tr>
+            <tr>
+                <td class="text-white">Вогневі</td>
+                <td class="td-value" app-table-cell-last [key]="'7000001.104'" [data]="dataMap" [fixed]="0"></td>        
+            </tr>
+            <tr>
+                <td class="text-white">Газонебезпечні</td>
+                <td class="td-value" app-table-cell-last [key]="'7000001.101'" [data]="dataMap" [fixed]="0"></td>        
+            </tr>
+            <tr>
+                <td class="text-white" >Ремонтні</td>
+                <td class="td-value" app-table-cell-last [key]="'7000001.102'" [data]="dataMap" [fixed]="0"></td>        
+            </tr>
+            <tr>
+                <td class="text-white">ТО і Д</td>
+                <td class="td-value" app-table-cell-last [key]="'7000001.100'" [data]="dataMap" [fixed]="0"></td>        
+            </tr>
+            <tr>
+                <td class="text-white">Дослідження</td>
+                <td class="td-value" app-table-cell-last [key]="'7000001.103'" [data]="dataMap" [fixed]="0"></td>        
+            </tr>
+            <tr>
+                <td class="text-white">&sum;</td>
+                <td class="td-value" app-table-cell-last [key]="'7000001.109'" [data]="dataMap" [fixed]="0"></td>        
+            </tr>
+            <tr class='row-condesed'>
+                <td colspan="2" app-table-cell-last [key]="'7000001.100'" [data]="dataMap" [field]="'time_stamp'"></td>
+            </tr>
+
+            </tbody>   
+        </table>             
+      </div>
+    </div>    
+
+    <div class="col-xxl-2  col-lg-3  col-sm-12 col-xs-12">
+        <div class="card">
+            <table class="table table-borderless table-sm  align-middle">
+                <tbody>
+
+                <tr class='text-white'>
+                    <th colspan="2">ГПА В РОБОТІ</th>
+                </tr>
+                <tr class='row-condesed'>
+                    <td></td>
+                    <td class="text-end">кількість</td>
+                </tr>
+                <tr>
+                    <td class="text-white">&sum;</td>
+                    <td class="td-value" app-table-cell-last [key]="'7000001.105'" [data]="dataMap" [fixed]="0"></td>        
+                </tr>
+                <tr class='row-condesed'>
+                    <td colspan="2" app-table-cell-last [key]="'7000001.105'" [data]="dataMap" [field]="'time_stamp'"></td>
+                </tr>
+
+                </tbody>   
+            </table>             
+    </div>
+
+    </div>
+
+    <div class="col-xxl-2  col-lg-3  col-sm-12 col-xs-12">
+        <div class="card">
+            <table class="table table-borderless table-sm align-middle">
+                <tbody>
+                <tr  class='text-white'>
+                    <th colspan="3">ПСГ В РОБОТІ</th>
+                </tr>
+                <tr class='row-condesed'>
+                    <td></td>
+                    <td class="text-end">кількість</td>
+                    <td class="text-end">&sum;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-otbor-label">
+                            В
+                        </div>                        
+                    </td>
+                    <td class="td-value" app-table-cell-last [key]="'7000001.108'" [data]="dataMap" [fixed]="0"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-zakachka-label">
+                            З
+                        </div>                                                
+                    <td class="td-value" app-table-cell-last [key]="'7000001.107'" [data]="dataMap" [fixed]="0"></td>        
+                    <td class="td-value" app-table-cell-last [key]="'7000001.106'" [data]="dataMap" [fixed]="0"></td>        
+                </tr>                
+                <tr>
+                    <td>
+                        <div class="td-neutr-label">
+                            НП
+                        </div>                        
+                    </td>
+                    <td class="td-value" app-table-cell-last [key]="'7000001.99'" [data]="dataMap" [fixed]="0"></td>
+                    <td></td>
+                </tr>
+                <tr class='row-condesed'>
+                    <td colspan="3" app-table-cell-last [key]="'7000001.106'" [data]="dataMap" [field]="'time_stamp'"></td>
+                </tr>
+                </tbody>   
+            </table>             
+        </div>
+    </div>
+
+    <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12">
+        <div class="card">
+            <table class="table table-borderless table-sm  align-middle">
+                <tbody>
+    
+                <tr>
+                    <th class='text-white' colspan="4">МИТТЄВІ ДАНІ</th>
+                </tr>
+                <tr  class="row-condesed">
+                    <td></td>
+                    <td>тис.м3/год</td>
+                    <td>млн.м3/д</td>
+                    <td>млн.м3</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-otbor-label">
+                            В
+                        </div>                        
+                    </td>
+                    <td class="td-value" app-table-cell-last [key]="'7000001.35'" [data]="dataMap"></td>                        
+                    <td class="td-value" app-table-cell-last [key]="'7000001.37'" [data]="dataMap"></td>
+                    <td class="td-value" app-table-cell-last [key]="'7000001.40'" [data]="dataMap"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-zakachka-label">
+                            З
+                        </div>                                                
+                    </td>
+                    <td class="td-value" app-table-cell-last [key]="'7000001.36'" [data]="dataMap"></td>                        
+                    <td class="td-value" app-table-cell-last [key]="'7000001.38'" [data]="dataMap"></td>
+                    <td class="td-value" app-table-cell-last [key]="'7000001.39'" [data]="dataMap"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="text-white">Відібрано з поч. доби</td>
+                    <td class="td-value" app-table-cell-last [key]="'7000001.42'" [data]="dataMap" [k]="0.001"></td>
+                </tr>               
+                <tr>
+                    <td colspan="3" class="text-white">Закачано з поч. доби</td>
+                    <td class="td-value" app-table-cell-last [key]="'7000001.41'" [data]="dataMap" [k]="0.001"></td>
+                </tr>
+                <tr class="row-condesed">
+                    <td colspan="4" app-table-cell-last [key]="'999601.7'" [data]="dataMap" [field]="'time_stamp'"></td>                    
+                </tr>
+                </tbody>   
+            </table> 
+        </div>
+    
+    </div>
+
+    <div class="col-xxl-3  col-lg-5  col-sm-12 col-xs-12">
+        <div class="card">
+            <table class="table table-borderless table-sm  align-middle">
+                <tbody>    
+                <tr class='text-white'>
+                    <th colspan="7">БІЛЬЧЕ-ВОЛ.-УГЕРСЬКЕ ПСГ</th>
+                </tr>
+                <tr class='row-condesed'>
+                    <td colspan="2">(7,5+5,5)</td>
+                    <td></td>
+                    <td></td>
+                    <td>тис.м3/год</td>
+                    <td></td>
+                    <td>тис.м3</td>
+                </tr>
+                <tr>
+                    <td>
+                        <app-with-inject-indicator [key]="'906024.57'" [data]="dataMap"></app-with-inject-indicator>
+                    </td>
+                    <td colspan="2"></td>                        
+                    <td class="text-white text-end fs-6"><i class="bi bi-speedometer2"></i></td>
+                    <td class="td-value" app-table-cell-last [key]="'906024.7'" [data]="dataMap"></td>        
+                    <td class="text-white text-end fs-6"><i class="bi bi-graph-up-arrow"></i></td>                        
+                    <td class="td-value" app-table-cell-last [key]="'906024.6'" [data]="dataMap"></td>        
+                </tr>
+                <tr class='row-condesed'>
+                    <td colspan="2">Ду1400 (7,5)</td>
+                    <td>кгс/см2</td>
+                    <td></td>
+                    <td>тис.м3/год</td>
+                    <td></td>
+                    <td>тис.м3</td>
+                </tr>
+                <tr>
+                    <td>
+                        <app-with-inject-indicator [key]="'999606.57'" [data]="dataMap"></app-with-inject-indicator>
+                    </td>
+                    <td class="text-white text-end"><i class="bi bi-p-circle"></i></td> 
+                    <td class="td-value" app-table-cell-last [key]="'999606.5'" [data]="dataMap"></td>                        
+                    <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                    <td class="td-value" app-table-cell-last [key]="'999606.7'" [data]="dataMap"></td>        
+                    <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                    <td class="td-value" app-table-cell-last [key]="'999606.6'" [data]="dataMap"></td>        
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="text-white text-end"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                    <td class="td-value" app-table-cell-last [key]="'999606.28'" [data]="dataMap"></td>
+                    <td class="text-white text-end"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                    <td class="td-value" app-table-cell-last [key]="'999606.12'" [data]="dataMap"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class='row-condesed'>
+                    <td colspan="2">Ду1200 (5,5)</td>
+                    <td>кгс/см2</td>
+                    <td></td>
+                    <td>тис.м3/год</td>
+                    <td></td>
+                    <td>тис.м3</td>
+                </tr>
+                <tr>
+                    <td>
+                        <app-with-inject-indicator [key]="'999601.57'" [data]="dataMap"></app-with-inject-indicator>
+                    </td>
+                    <td class="text-white text-end"><i class="bi bi-p-circle"></i></td>
+                    <td class="td-value" app-table-cell-last [key]="'999601.5'" [data]="dataMap"></td>                        
+                    <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                    <td class="td-value" app-table-cell-last [key]="'999601.7'" [data]="dataMap"></td>        
+                    <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                    <td class="td-value" app-table-cell-last [key]="'999601.6'" [data]="dataMap"></td>        
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="text-white"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                    <td class="td-value" app-table-cell-last [key]="'999601.28'" [data]="dataMap"></td>
+                    <td class="text-white"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                    <td class="td-value" app-table-cell-last [key]="'999601.12'" [data]="dataMap"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr  class="row-condesed">
+                    <td colspan="7" app-table-cell-last [key]="'999601.7'" [data]="dataMap" [field]="'time_stamp'"></td>
+                </tr>
+    
+                </tbody>   
+            </table> 
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12">
+      <div class="card">
+
+        <table class="table table-borderless table-sm  align-middle">
+            <tbody>    
+            <tr class='text-white'>
+                <th colspan="7">ОПАРСЬКЕ ПСГ</th>
+            </tr>
+
+            <tr class='row-condesed'>
+                <td colspan="2"></td>
+                <td>кгс/см2</td>
+                <td></td>
+                <td>тис.м3/год</td>
+                <td></td>
+                <td>тис.м3</td>
+            </tr>
+            <tr>
+                <td>
+                    <app-with-inject-indicator [key]="'906021.57'" [data]="dataMap"></app-with-inject-indicator>
+                </td>
+                <td class="text-white text-end"><i class="bi bi-p-circle"></i></td> 
+                <td class="td-value" app-table-cell-last [key]="'906021.5'" [data]="dataMap"></td>                        
+                <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                <td class="td-value" app-table-cell-last [key]="'906021.7'" [data]="dataMap"></td>        
+                <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                <td class="td-value" app-table-cell-last [key]="'906021.6'" [data]="dataMap"></td>        
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text-white text-end"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                <td class="td-value" app-table-cell-last [key]="'906021.28'" [data]="dataMap"></td>
+                <td class="text-white text-end"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                <td class="td-value" app-table-cell-last [key]="'906021.12'" [data]="dataMap"></td>
+                <td class="text-white text-end">P <i class="bi bi-arrows-collapse"></i></td>
+                <td class="td-value" app-table-cell-last [key]="'906021.20'" [data]="dataMap"></td>
+            </tr>
+
+            <tr  class="row-condesed">
+                <td colspan="7" app-table-cell-last [key]="'906021.7'" [data]="dataMap" [field]="'time_stamp'"></td>
+            </tr>
+
+            </tbody>   
+        </table> 
+
+      </div>      
+    </div>
+
+    <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12">
+        <div class="card">
+  
+          <table class="table table-borderless table-sm  align-middle">
+              <tbody>    
+              <tr class='text-white'>
+                  <th colspan="7">УГЕРСЬКЕ ПСГ</th>
+              </tr>
+  
+              <tr class='row-condesed'>
+                  <td colspan="2"></td>
+                  <td>кгс/см2</td>
+                  <td></td>
+                  <td>тис.м3/год</td>
+                  <td></td>
+                  <td>тис.м3</td>
+              </tr>
+              <tr>
+                  <td>
+                      <app-with-inject-indicator [key]="'906023.57'" [data]="dataMap"></app-with-inject-indicator>
+                  </td>
+                  <td class="text-white text-end"><i class="bi bi-p-circle"></i></td> 
+                  <td class="td-value" app-table-cell-last [key]="'906023.5'" [data]="dataMap"></td>                        
+                  <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'906023.7'" [data]="dataMap"></td>        
+                  <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'906023.6'" [data]="dataMap"></td>        
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'906023.28'" [data]="dataMap"></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'906023.12'" [data]="dataMap"></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+  
+              <tr  class="row-condesed">
+                  <td colspan="7" app-table-cell-last [key]="'906023.7'" [data]="dataMap" [field]="'time_stamp'"></td>
+              </tr>
+  
+              </tbody>   
+          </table> 
+  
+        </div>      
+    </div>
+
+    <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12">
+        <div class="card">
+  
+          <table class="table table-borderless table-sm  align-middle">
+              <tbody>    
+              <tr class='text-white'>
+                  <th colspan="7">БОГОРОДЧАНСЬКЕ ПСГ</th>
+              </tr>
+  
+              <tr class='row-condesed'>
+                  <td colspan="2"></td>
+                  <td>кгс/см2</td>
+                  <td></td>
+                  <td>тис.м3/год</td>
+                  <td></td>
+                  <td>тис.м3</td>
+              </tr>
+              <tr>
+                  <td>
+                      <app-with-inject-indicator [key]="'903031.57'" [data]="dataMap"></app-with-inject-indicator>
+                  </td>
+                  <td class="text-white text-end"><i class="bi bi-p-circle"></i></td> 
+                  <td class="td-value" app-table-cell-last [key]="'903031.5'" [data]="dataMap"></td>                        
+                  <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'903031.7'" [data]="dataMap"></td>        
+                  <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'903031.6'" [data]="dataMap"></td>        
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'903031.28'" [data]="dataMap"></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'903031.12'" [data]="dataMap"></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+  
+              <tr  class="row-condesed">
+                  <td colspan="7" app-table-cell-last [key]="'903031.7'" [data]="dataMap" [field]="'time_stamp'"></td>
+              </tr>
+  
+              </tbody>   
+          </table> 
+  
+        </div>      
+    </div>
+
+    <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12">
+        <div class="card">
+  
+          <table class="table table-borderless table-sm  align-middle">
+              <tbody>    
+              <tr class='text-white'>
+                  <th colspan="7">ДАШАВСЬКЕ ПСГ</th>
+              </tr>
+  
+              <tr class='row-condesed'>
+                  <td colspan="2"></td>
+                  <td>кгс/см2</td>
+                  <td></td>
+                  <td>тис.м3/год</td>
+                  <td></td>
+                  <td>тис.м3</td>
+              </tr>
+              <tr>
+                  <td>
+                      <app-with-inject-indicator [key]="'906022.57'" [data]="dataMap"></app-with-inject-indicator>
+                  </td>
+                  <td class="text-white text-end"><i class="bi bi-p-circle"></i></td> 
+                  <td class="td-value" app-table-cell-last [key]="'906022.5'" [data]="dataMap"></td>                        
+                  <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'906022.7'" [data]="dataMap"></td>        
+                  <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'906022.6'" [data]="dataMap"></td>        
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'906022.28'" [data]="dataMap"></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'906022.12'" [data]="dataMap"></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+  
+              <tr  class="row-condesed">
+                  <td colspan="7" app-table-cell-last [key]="'906022.7'" [data]="dataMap" [field]="'time_stamp'"></td>
+              </tr>
+  
+              </tbody>   
+          </table> 
+  
+        </div>      
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12">
+      <div class="card">
+
+        <table class="table table-borderless table-sm  align-middle">
+            <tbody>    
+            <tr class='text-white'>
+                <th colspan="7">МРИНСЬКЕ ПСГ</th>
+            </tr>
+
+            <tr class='row-condesed'>
+                <td colspan="2"></td>
+                <td>кгс/см2</td>
+                <td></td>
+                <td>тис.м3/год</td>
+                <td></td>
+                <td>тис.м3</td>
+            </tr>
+            <tr>
+                <td>
+                    <app-with-inject-indicator [key]="'901032.57'" [data]="dataMap"></app-with-inject-indicator>
+                </td>
+                <td class="text-white text-end"><i class="bi bi-p-circle"></i></td> 
+                <td class="td-value" app-table-cell-last [key]="'901032.5'" [data]="dataMap"></td>                        
+                <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                <td class="td-value" app-table-cell-last [key]="'901032.7'" [data]="dataMap"></td>        
+                <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                <td class="td-value" app-table-cell-last [key]="'901032.6'" [data]="dataMap"></td>        
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text-white text-end"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                <td class="td-value" app-table-cell-last [key]="'901032.28'" [data]="dataMap"></td>
+                <td class="text-white text-end"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                <td class="td-value" app-table-cell-last [key]="'901032.12'" [data]="dataMap"></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr  class="row-condesed">
+                <td colspan="7" app-table-cell-last [key]="'901032.7'" [data]="dataMap" [field]="'time_stamp'"></td>
+            </tr>
+
+            </tbody>   
+        </table> 
+
+      </div>      
+    </div>
+
+    <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12">
+        <div class="card">
+  
+          <table class="table table-borderless table-sm  align-middle">
+              <tbody>    
+              <tr class='text-white'>
+                  <th colspan="7">СОЛОХІВСЬКЕ ПСГ</th>
+              </tr>
+  
+              <tr class='row-condesed'>
+                  <td colspan="2"></td>
+                  <td>кгс/см2</td>
+                  <td></td>
+                  <td>тис.м3/год</td>
+                  <td></td>
+                  <td>тис.м3</td>
+              </tr>
+              <tr>
+                  <td>
+                      <app-with-inject-indicator [key]="'901031.57'" [data]="dataMap"></app-with-inject-indicator>
+                  </td>
+                  <td class="text-white text-end"><i class="bi bi-p-circle"></i></td> 
+                  <td class="td-value" app-table-cell-last [key]="'901031.5'" [data]="dataMap"></td>                        
+                  <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'901031.7'" [data]="dataMap"></td>        
+                  <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'901031.6'" [data]="dataMap"></td>        
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'901031.28'" [data]="dataMap"></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'901031.12'" [data]="dataMap"></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+  
+              <tr  class="row-condesed">
+                  <td colspan="7" app-table-cell-last [key]="'901031.7'" [data]="dataMap" [field]="'time_stamp'"></td>
+              </tr>
+  
+              </tbody>   
+          </table> 
+  
+        </div>      
+    </div>
+
+    <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12">
+        <div class="card">
+  
+          <table class="table table-borderless table-sm  align-middle">
+              <tbody>    
+              <tr class='text-white'>
+                  <th colspan="7">КЕГИЧІВСЬКЕ ПСГ</th>
+              </tr>
+  
+              <tr class='row-condesed'>
+                  <td colspan="2"></td>
+                  <td>кгс/см2</td>
+                  <td></td>
+                  <td>тис.м3/год</td>
+                  <td></td>
+                  <td>тис.м3</td>
+              </tr>
+              <tr>
+                  <td>
+                      <app-with-inject-indicator [key]="'902032.57'" [data]="dataMap"></app-with-inject-indicator>
+                  </td>
+                  <td class="text-white text-end"><i class="bi bi-p-circle"></i></td> 
+                  <td class="td-value" app-table-cell-last [key]="'902032.5'" [data]="dataMap"></td>                        
+                  <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'902032.7'" [data]="dataMap"></td>        
+                  <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'902032.6'" [data]="dataMap"></td>        
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'902032.28'" [data]="dataMap"></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'902032.12'" [data]="dataMap"></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+  
+              <tr  class="row-condesed">
+                  <td colspan="7" app-table-cell-last [key]="'902032.7'" [data]="dataMap" [field]="'time_stamp'"></td>
+              </tr>
+  
+              </tbody>   
+          </table> 
+  
+        </div>      
+    </div>
+
+    <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12">
+        <div class="card">
+  
+          <table class="table table-borderless table-sm  align-middle">
+              <tbody>    
+              <tr class='text-white'>
+                  <th colspan="7">ПРОЛЕТАРСЬКЕ ПСГ</th>
+              </tr>
+  
+              <tr class='row-condesed'>
+                  <td colspan="2"></td>
+                  <td>кгс/см2</td>
+                  <td></td>
+                  <td>тис.м3/год</td>
+                  <td></td>
+                  <td>тис.м3</td>
+              </tr>
+              <tr>
+                  <td>
+                      <app-with-inject-indicator [key]="'902031.57'" [data]="dataMap"></app-with-inject-indicator>
+                  </td>
+                  <td class="text-white text-end"><i class="bi bi-p-circle"></i></td> 
+                  <td class="td-value" app-table-cell-last [key]="'902031.5'" [data]="dataMap"></td>                        
+                  <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'902031.7'" [data]="dataMap"></td>        
+                  <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                  <td class="td-value" app-table-cell-last [key]="'902031.6'" [data]="dataMap"></td>        
+              </tr>
+              <tr>
+                  <td></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'902031.28'" [data]="dataMap"></td>
+                  <td class="text-white text-end"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                  <td class="td-value" app-table-cell-last [key]="'902031.12'" [data]="dataMap"></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+  
+              <tr  class="row-condesed">
+                  <td colspan="7" app-table-cell-last [key]="'902031.7'" [data]="dataMap" [field]="'time_stamp'"></td>
+              </tr>
+  
+              </tbody>   
+          </table> 
+  
+        </div>      
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12">
+      <div class="card">
+
+        <table class="table table-borderless table-sm  align-middle">
+            <tbody>    
+            <tr class='text-white'>
+                <th colspan="7">КРАСНОПОПІВСЬКЕ ПСГ</th>
+            </tr>
+
+            <tr class='row-condesed'>
+                <td colspan="2"></td>
+                <td>кгс/см2</td>
+                <td></td>
+                <td>тис.м3/год</td>
+                <td></td>
+                <td>тис.м3</td>
+            </tr>
+            <tr>
+                <td>
+                    <app-with-inject-indicator [key]="'905031.57'" [data]="dataMap"></app-with-inject-indicator>
+                </td>
+                <td class="text-white text-end"><i class="bi bi-p-circle"></i></td> 
+                <td class="td-value" app-table-cell-last [key]="'905031.5'" [data]="dataMap"></td>                        
+                <td class="text-white text-end"><i class="bi bi-speedometer2"></i></td>
+                <td class="td-value" app-table-cell-last [key]="'905031.7'" [data]="dataMap"></td>        
+                <td class="text-white text-end"><i class="bi bi-graph-up-arrow"></i></td>
+                <td class="td-value" app-table-cell-last [key]="'905031.6'" [data]="dataMap"></td>        
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text-white text-end"><i class="bi bi-droplet"></i><small>H2O,&#8451;</small></td>
+                <td class="td-value" app-table-cell-last [key]="'905031.28'" [data]="dataMap"></td>
+                <td class="text-white text-end"><i class="bi bi-droplet"></i><small>CH,&#8451;</small></td>
+                <td class="td-value" app-table-cell-last [key]="'905031.12'" [data]="dataMap"></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr  class="row-condesed">
+                <td colspan="7" app-table-cell-last [key]="'905031.7'" [data]="dataMap" [field]="'time_stamp'"></td>
+            </tr>
+
+            </tbody>   
+        </table> 
+
+      </div>      
+    </div>
+</div>

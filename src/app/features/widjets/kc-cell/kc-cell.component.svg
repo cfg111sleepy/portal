@@ -1,0 +1,6 @@
+
+<svg>
+  <g >
+        <text [attr.x]="x" [attr.y]="y" font-size="0.4em" fill="black">{{value}}</text>
+  </g>
+</svg>

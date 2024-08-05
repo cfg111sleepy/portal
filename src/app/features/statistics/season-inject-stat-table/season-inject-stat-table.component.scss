@@ -1,0 +1,26 @@
+@mixin width {
+  width: auto !important;
+}
+table {
+  &.table-fit {
+      @include width;
+      table-layout: auto !important;
+      thead th, tfoot th  {
+          @include width;
+      }
+      tbody td, tfoot td {
+          @include width;
+      }
+  }
+}
+
+.table th {
+    text-align: center;
+}
+
+th:first-child, td:first-child
+{
+  position:sticky;
+  left:0px;
+
+}

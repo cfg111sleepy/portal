@@ -1,0 +1,80 @@
+<!--
+    0063af - синий
+    0bbbef - голубой
+    1d1d1b - черный
+
+    9b172d  - красн
+    ed6842 - оранж
+    ffd744 - желтый
+    459534 - зеленый
+    a1b4be - серый
+-->
+
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+      <div class="col-auto  bg-dark  vh-100">
+
+        <div class="rounded-1 text-bg-light mb-1">
+            <img src="/assets/Transparent_UKR_SSOU_Logo_Gorizontal.png" alt="OGSU logo" height="60">            
+        </div>
+
+        <div class="text-bg-dark mb-3" *ngIf="currentUser._id">
+            <ngb-datepicker [(ngModel)]="selectedDay" (dateSelect)="clickSelectDay($event)"></ngb-datepicker>
+        </div>
+        
+    
+        <div class="d-flex flex-column align-items-center align-items-sm-start text-white  overflow-auto  ">
+
+        <app-side-menu-tree *ngIf="currentUser._id" [rootnode]="sideMenu" (change)="sideMenuLeafClick($event)"></app-side-menu-tree>
+
+            <div class="dropdown py-4">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    
+                    <img src="/assets/1.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+
+                    <span class="d-none d-sm-inline mx-1">{{ currentUser.name }}</span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                    <li>
+                        <button type="button" class="dropdown-item btn btn-link" (click)="onNavigate('/login',{})">
+                            <span class="d-none d-sm-inline">Змінити користувача</span>                             
+                        </button>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <button type="button" class="dropdown-item btn btn-link" (click)="singOut()">
+                            <span class="d-none d-sm-inline">Вийти</span>                             
+                        </button>
+                    </li>
+                </ul>
+            </div>                
+
+
+
+              <div class="rounded-1 text-bg-light my-3">
+                <img src="/assets/utg-logo.png" alt="OGSU logo" height="60">            
+              </div>
+
+        </div>
+      </div>
+
+    <div id="spinner" class="spinner-border text-primary" role="status" *ngIf="(loader$ | async)">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+      <div class="main col py-1">
+          <router-outlet></router-outlet> 
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+

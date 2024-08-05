@@ -1,0 +1,10 @@
+
+<svg>
+  <g >
+    <rect [attr.x]="x" [attr.y]="y" [attr.width]="40" [attr.height]="12" fill="grey" fill-opacity="0.8"/>
+
+    <text [attr.x]="x" [attr.y]="y" dx="1" dy="4" font-size=".2em" font-weight="bold" fill="white"><ng-content></ng-content></text>      
+
+    <text [attr.x]="x" [attr.y]="y" dx="1" dy="10"  font-size=".3em" font-weight="bold" fill="chartreuse">{{value}}</text>
+  </g>
+</svg>

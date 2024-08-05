@@ -1,0 +1,12 @@
+<div class="mb-2">
+  <app-popup-range-selector [start]="(range$ | async)!" (changed)="onRangeChanged($event)"></app-popup-range-selector>    
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <app-days-compare-x-lines-chart [data]="dataMap" [key1]="'9900405.8'"></app-days-compare-x-lines-chart>
+  </div>
+  <div class="col-6">
+    
+  </div>
+</div>

@@ -1,0 +1,353 @@
+
+<div class="row">
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+    <div class="card-l">
+        <app-op-data1-line-chart [key1]="'6000500.9'" [data]="dataMap" [title]="'ГВС Германовичі, Р'"></app-op-data1-line-chart>
+        <div app-table-cell-last2 [text]="'Q'" [key]="'6000500.8'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+        [fixed]="1" (click)="openScrollableContent(longContent, '6000500.8')"></div>    
+    </div>
+    <div class="card-pzg">
+        <app-op-data1-line-chart [key1]="'6000037.9'" [data]="dataMap" [title]="'ГВС Дроздовичі, Р'"></app-op-data1-line-chart>
+        <div app-table-cell-last2 [text]="'Q'" [key]="'6000037.8'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="1" (click)="openScrollableContent(longContent, '6000037.8')"></div>
+        </div>                
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+    <div class="card">
+        <app-op-data1-line-chart [key1]="'906008.1'" [data]="dataMap" [title]="'КС Комарно Рвх'"></app-op-data1-line-chart>
+    </div>
+    <div class="card">        
+        <app-op-data1-line-chart [key1]="'906008.2'" [data]="dataMap" [title]="'КС Комарно Рвих'"></app-op-data1-line-chart>
+        <div app-table-cell-last2 [text]="'Nгпа'" [key]="'906008.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+        [fixed]="0" (click)="openScrollableContent(longContent, '906008.505')"></div>
+    </div>        
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+    <div class="card-pzg">
+        <app-op-data1-line-chart [key1]="'906010.2'" [data]="dataMap" [title]="'КС Бібрка (КС-1 І-Д-2) Рвих'"></app-op-data1-line-chart>
+        <div app-table-cell-last2 [text]="'Nгпа'" [key]="'906010.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+        [fixed]="0" (click)="openScrollableContent(longContent, '906010.505')"></div>
+    </div>
+    <div class="card-pzg">
+        <app-op-data1-line-chart [key1]="'906020.2'" [data]="dataMap" [title]="'КС Бібрка (КС-2 І-Д-3) Рвих'"></app-op-data1-line-chart>
+        <div app-table-cell-last2 [text]="'Nгпа'" [key]="'906020.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+        [fixed]="0" (click)="openScrollableContent(longContent, '906020.505')"></div>
+    </div>
+    
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <app-popup-range-selector [start]="(range$ | async)!" (changed)="onRangeChanged($event)"></app-popup-range-selector>    
+
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+    <div class="card-pzg">
+        <app-op-data1-line-chart [key1]="'901017.1'" [data]="dataMap" [title]="'КС Боярка Рвх'"></app-op-data1-line-chart>
+    </div>
+    <div class="card-pzg">
+        <app-op-data1-line-chart [key1]="'901017.2'" [data]="dataMap" [title]="'КС Боярка Рвих'"></app-op-data1-line-chart>
+        <div app-table-cell-last2 [text]="'Nгпа'" [key]="'901017.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+        [fixed]="0" (click)="openScrollableContent(longContent, '901017.505')"></div>
+    </div>        
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+    <div class="card">
+        <app-op-data1-line-chart [key1]="'901005.1'" [data]="dataMap" [title]="'КС Суми Рвх'"></app-op-data1-line-chart>
+    </div>
+    <div class="card">
+        <app-op-data1-line-chart [key1]="'901005.2'" [data]="dataMap" [title]="'КС Суми Рвих'"></app-op-data1-line-chart>
+        <div app-table-cell-last2 [text]="'Nгпа'" [key]="'901005.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+        [fixed]="0" (click)="openScrollableContent(longContent, '901005.505')"></div>
+    </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'6000012.9'" [data]="dataMap" [title]="'ПЗГР Ходовичі, з БВУ ПСГ, Р'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Q'" [key]="'6000012.8'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" [fixed]="1"></div>        
+        </div>
+      
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'3000028.9'" [data]="dataMap" [title]="'ПЗГР Ходовичі, з КС Долина, Р'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Q'" [key]="'3000028.8'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="1"  (click)="openScrollableContent(longContent, '3000028.8')"></div>
+        </div>
+             
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'6000014.9'" [data]="dataMap" [title]="'ПЗГР Ходовичі, КЗУ-2, Р'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Q'" [key]="'6000014.8'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="1"  (click)="openScrollableContent(longContent, '6000014.8')"></div>
+        </div>        
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-pzg">
+            <app-op-data1-line-chart [key1]="'999220.9'" [data]="dataMap" [title]="'ГВС Красилів Р'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Q'" [key]="'999220.8'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="1" (click)="openScrollableContent(longContent, '999220.8')"></div>
+        </div>        
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card">
+            <app-op-data1-line-chart [key1]="'901015.1'" [data]="dataMap" [title]="'КС Яготин Рвх'"></app-op-data1-line-chart>
+        </div>
+       
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-pzg">
+            <app-op-data1-line-chart [key1]="'905023.1'" [data]="dataMap" [title]="'КС-13 Первомайськ  Рвх'"></app-op-data1-line-chart>
+        </div>
+      
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-pzg">
+            <app-op-data1-line-chart [key1]="'6000017.9'" [data]="dataMap" [title]="'Довге, І-Д-3, Р'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Q'" [key]="'6000017.8'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="1" (click)="openScrollableContent(longContent, '6000017.8')"></div>
+        </div>  
+        <div class="card">
+            <app-op-data1-line-chart [key1]="'903009.1'" [data]="dataMap" [title]="'КС Долина (КС-2 ДУД-1400) Рвх'"></app-op-data1-line-chart>
+        </div>
+        <div class="card">
+            <app-op-data1-line-chart [key1]="'903009.2'" [data]="dataMap" [title]="'КС Долина (КС-2 ДУД-1400) Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'903009.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '903009.505')"></div>
+        </div>        
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-pzg">
+            <app-op-data1-line-chart [key1]="'6000016.9'" [data]="dataMap" [title]="'Дідушичі, І-Д-2, Р'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Q'" [key]="'6000016.8'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="1"  (click)="openScrollableContent(longContent, '6000016.8')"></div>
+        </div>   
+        <div class="card">
+            <app-op-data1-line-chart [key1]="'903010.1'" [data]="dataMap" [title]="'КС Долина (КС-3 ДУД-1400) Рвх'"></app-op-data1-line-chart>
+        </div>
+        <div class="card">
+            <app-op-data1-line-chart [key1]="'903010.2'" [data]="dataMap" [title]="'КС Долина (КС-3 ДУД-1400) Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'903010.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '903010.505')"></div>
+        </div>        
+    </div>
+    
+    <div class="col-lg-4  col-sm-12 col-xs-12"> 
+        <table class="table table-bordered table-sm  align-middle">
+            <thead>
+                <tr>
+                    <th>Точка розмежування</th>
+                    <th>P, кгс/см&#178; <br>{{getDaysCompareRow(999601).prev?.time_stamp | date:'dd.MM.YY hh:mm'}}</th>
+                    <th>P, кгс/см&#178; <br>{{getDaysCompareRow(999601).last?.time_stamp | date:'dd.MM.YY hh:mm'}}</th>
+                    <th>&Delta;Р,<br> кгс/см&#178;</th>    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ПСГ Угерьске \ МГ КЗУ-2 Ду1000</td>
+                    <td>{{getDaysCompareRow(6102135).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6102135).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6102135).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Б-В-У \ МГ Ів-Долина 3н, КЗУ-2 Ду1200</td>
+                    <td>{{getDaysCompareRow(999601).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(999601).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(999601).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Б-В-У \ МГ Б-В-Долина Ду1400</td>
+                    <td>{{getDaysCompareRow(999606).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(999606).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(999606).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Опари \ МГ Опари-Угерсько Ду1000</td>
+                    <td>{{getDaysCompareRow(6090439).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6090439).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6090439).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Дашава \ МГ Ів-Долина 2н Ду1200</td>
+                    <td>{{getDaysCompareRow(6080470).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6080470).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6080470).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Дашава \ МГ КЗУ-2 Ду1200</td>
+                    <td>{{getDaysCompareRow(6080471).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6080471).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6080471).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Дашава \ МГ Дашава-Угерсько</td>
+                    <td>{{getDaysCompareRow(6080472).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6080472).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6080472).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Дашава \ МГ Ів-Долина 3н. Ду1200</td>
+                    <td>{{getDaysCompareRow(6080473).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6080473).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6080473).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Дашава \ МГ Б-В-Долина Ду1400</td>
+                    <td>{{getDaysCompareRow(6080474).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6080474).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(6080474).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Кегичівка \ МГ ШПК, ЄДК, ЩДК</td>
+                    <td>{{getDaysCompareRow(2110676).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(2110676).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(2110676).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Пролетарске \ МГ ЩДКРІ</td>
+                    <td>{{getDaysCompareRow(2110675).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(2110675).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(2110675).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Богородчани \ МГ Бог-Долина Ду1400, Прогрес Ду1400, УПУ Ду1400</td>
+                    <td>{{getDaysCompareRow(3012226).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(3012226).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(3012226).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Мринське \ МГ ЧППСГ-Київ, ТШК Ду1000</td>
+                    <td>{{getDaysCompareRow(1091110).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(1091110).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(1091110).diff | number:'1.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>ПСГ Солохівське \ МГ відвод Ду700 з(на) КС Диканька</td>
+                    <td>{{getDaysCompareRow(1091136).prev?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(1091136).last?.value | number:'1.1-1'}}</td>
+                    <td>{{getDaysCompareRow(1091136).diff | number:'1.1-1'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card">
+            <app-op-data1-line-chart [key1]="'901015.2'" [data]="dataMap" [title]="'КС Яготин Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'901015.5'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '901015.5')"></div>
+        </div> 
+        <div class="card-pzg">
+            <app-op-data1-line-chart [key1]="'901016.1'" [data]="dataMap" [title]="'КС Глушківська Рвх'"></app-op-data1-line-chart>
+        </div>
+        <div class="card-pzg">
+            <app-op-data1-line-chart [key1]="'901016.2'" [data]="dataMap" [title]="'КС Глушківська Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'901016.5'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '901016.5')"></div>
+        </div>        
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-pzg">
+            <app-op-data1-line-chart [key1]="'905023.2'" [data]="dataMap" [title]="'КС-13 Первомайськ  Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'905023.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '905023.505')"></div>
+        </div>  
+        <div class="card">
+            <app-op-data1-line-chart [key1]="'904005.1'" [data]="dataMap" [title]="'КС Машівка Рвх'"></app-op-data1-line-chart>
+        </div>
+        <div class="card">
+            <app-op-data1-line-chart [key1]="'904005.2'" [data]="dataMap" [title]="'КС Машівка Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'904005.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '904005.505')"></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'903001.1'" [data]="dataMap" [title]="'КС Богородчани (КС-21 Союз) Рвх'"></app-op-data1-line-chart>
+        </div>
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'903001.2'" [data]="dataMap" [title]="'КС Богородчани (КС-21 Союз) Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'903001.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '903001.505')"></div>
+        </div>        
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'903003.1'" [data]="dataMap" [title]="'КС Богородчани (КС-39П Прогресс) Рвх'"></app-op-data1-line-chart>
+        </div>
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'903003.2'" [data]="dataMap" [title]="'КС Богородчани (КС-39П Прогресс) Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'903003.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '903003.505')"></div>
+        </div>        
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'903002.1'" [data]="dataMap" [title]="'КС Богородчани (КС-39 УПУ) Рвх'"></app-op-data1-line-chart>
+        </div>
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'903002.2'" [data]="dataMap" [title]="'КС Богородчани (КС-39 УПУ) Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'903002.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '903002.505')"></div>
+        </div>
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'903004.1'" [data]="dataMap" [title]="'КС Богородчани (КС-7 АЧБ) Рвх'"></app-op-data1-line-chart>
+        </div>
+        <div class="card-l">
+            <app-op-data1-line-chart [key1]="'903004.2'" [data]="dataMap" [title]="'КС Богородчани (КС-7 АЧБ) Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'903004.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '903004.505')"></div>
+        </div>
+        
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card">
+            <app-op-data1-line-chart [key1]="'901009.1'" [data]="dataMap" [title]="'КС Диканька Рвх'"></app-op-data1-line-chart>
+        </div>
+        <div class="card">
+            <app-op-data1-line-chart [key1]="'901009.2'" [data]="dataMap" [title]="'КС Диканька Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'901009.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '901009.505')"></div>
+        </div>        
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+        <div class="card-pzg">
+            <app-op-data1-line-chart [key1]="'902023.1'" [data]="dataMap" [title]="'КС Павлоград Рвх'"></app-op-data1-line-chart>
+        </div>
+        <div class="card-pzg">
+            <app-op-data1-line-chart [key1]="'902023.2'" [data]="dataMap" [title]="'КС Павлоград Рвих'"></app-op-data1-line-chart>
+            <div app-table-cell-last2 [text]="'Nгпа'" [key]="'902023.505'" [data]="dataMap" class="position-absolute top-100 start-50 translate-middle fs-6 pb-3" 
+            [fixed]="0" (click)="openScrollableContent(longContent, '902023.505')"></div>
+        </div>        
+    </div>
+
+</div>
+
+
+<!-- MODAL -->
+
+<ng-template #longContent let-modal>
+	<div class="modal-header">
+		ТРЕНД <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+    <app-parameter-trend [key]="selectedTrend"></app-parameter-trend>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-light" (click)="modal.close('Close click')">Закрити</button>
+	</div>
+</ng-template>
+
+<!--END  MODAL -->

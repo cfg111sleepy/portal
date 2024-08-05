@@ -1,0 +1,74 @@
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+.card {
+    border-radius: 0.5em;
+    background-color: rgb(199, 209, 216);
+    margin: 5px;
+    cursor: pointer;
+}
+
+td {
+    padding: 0px;
+}
+
+.td-bordered-center {
+    border: 1px solid black;
+    border-radius: 0.5em;
+    text-align: center;
+    border-collapse: separate; 
+}
+
+.card-header {
+    background-color: rgb(161, 180, 190);
+    border-bottom: 3cap;
+    border-color: black;
+    padding: 0;
+}
+
+.card-header-title {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.card-header-time {
+    text-align: right;
+    font-size: 0.6em;
+}
+
+.gre {
+    background-color: rgb(75, 149, 52);
+    color: white;
+    font-size: 1em;
+}
+
+ .eunits {
+    font-size: 0.6em;
+ }
+
+ .otbor-value {
+    color: rgb(155, 23, 45);
+    
+    font-weight: bold;
+ }
+
+.zakachka-value {
+    color: rgb(69, 149, 52);
+    font-weight: bold;
+    font-size: 1em;
+ }
+
+ .akt-value {
+    font-weight: bold;
+    font-size: 1em;
+ }
+
+ .main-label {
+    font-size: 0.8em;
+ }
+ 
+ .second-label {
+    font-size: 0.8em;
+ }

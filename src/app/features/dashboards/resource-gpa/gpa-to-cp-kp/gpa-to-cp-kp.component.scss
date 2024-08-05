@@ -1,0 +1,54 @@
+.card {
+    border-radius: 0.5em;
+}
+
+.nowork {
+    background-color: var(--color-option-2);
+}
+
+.work {
+    background-color: var(--color-option-9);
+}
+
+.to {
+    background-color: var(--color-option-12);
+}
+
+
+.label-to {
+    font-size: 0.6em;
+}
+
+.label-to-bold {
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+ table{
+    width:100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+ }
+
+ .red {
+    background-color: rgb(255, 89, 9);
+    color: black;
+    font-size: 1em;
+ }
+
+ .yel {
+    background-color: rgb(255, 219, 9);
+    color: black;
+    font-size: 1em;
+ }
+
+ .gre {
+    background-color: rgb(75, 149, 52);
+    color: white;
+    font-size: 1em;
+ }

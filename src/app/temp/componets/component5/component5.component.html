@@ -1,0 +1,43 @@
+<div class="content">
+    <div class="row p-1">        
+        <div class="col-lg-2 col-sm-12">
+            <div  class="input-group">
+                <input
+                    class="form-control"
+                    placeholder="yyyy-mm-dd"
+                    name="dp1"
+                    id="dp1"
+                    [(ngModel)]="selectedDay"
+                    ngbDatepicker
+                    #d1="ngbDatepicker"
+                    (dateSelect)="clickSelectDay($event)"
+                />
+                <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d1.toggle()" type="button"></button>
+            </div>
+        </div>
+        <div class="col-lg-10 col-sm-12">
+            <div class="header">СПОЖИВАННЯ ГАЗУ В УКРАЇНІ</div>
+        </div>
+    </div>
+
+    <div class="row p-4">
+        
+        <div class="col-xxl-4 col-lg-6  col-sm-12 col-xs-12">        
+            <app-day-add-xlines-chart-component [data]="lines" [title]="title" ></app-day-add-xlines-chart-component>    
+            <app-day-add-xlines-chart-component [data]="lines1" [title]="title1" ></app-day-add-xlines-chart-component>
+            <br>
+            <app-regions-consume-table (regionChanged)="regionChanged($event)"></app-regions-consume-table>    
+        </div>
+        
+        <div class="col-xxl-4 col-lg-6  col-sm-12 col-xs-12">
+            <app-flow-forecast [rows]="rows" [totals]="totals" [totals1]="totals1" 
+                [currentGasDay]="currentGasDay" [gasDay_1]="gasDay_1" [gasDay_2]="gasDay_2" [gasDay_3]="gasDay_3">
+            </app-flow-forecast>
+        </div>
+
+        <div class="col-xxl-4 col-lg-6  col-sm-12 col-xs-12">
+            <app-gas-consume-temperature (rowDeleting)="onDeleteRow($event)" [data]="consumeTemperatureMap"></app-gas-consume-temperature>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,303 @@
+
+<button class="btn btn-primary-outline d-block d-md-none sticky-top" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas1" aria-controls="offcanvas1">
+  MENU
+</button>
+
+<div class="container-fluid overflow-hidden root">  
+    <div class="row vh-100 overflow-auto">
+            <div class="d-flex flex-column d-none d-lg-block align-items-center" style="width: 5rem; background-color: rgb(72,93,104);">
+
+                <ul class="nav">
+                    <div class="btn-group dropend py-3" style="width: 100%;">
+                      <button type="button" class="btn side-btn"  (click)="onNavigate('/',{})">
+                        <img src="/assets/disp-logo-transparent.png" width="100%" height="auto"/>
+                      </button>
+                    </div>
+               
+              
+                  <div class="btn-group dropend py-3" style="width: 100%;">
+                    <button type="button" class="btn dropdown-toggle side-btn" data-bs-toggle="dropdown" aria-expanded="false" [disabled]="!currentUser._id">
+                      <div><i class="bi bi-calendar3"></i></div>             
+                      <strong>{{selectedDay.day}}</strong>
+                    </button>
+                    <ul class="dropdown-menu side-btn">
+                      <li>
+                        <div>
+                          <ngb-datepicker [(ngModel)]="selectedDay" (dateSelect)="clickSelectDay($event)"></ngb-datepicker>
+                      </div>      
+                      </li>
+                    </ul>
+                  
+                  </div>
+ 
+ 
+                  <div class="btn-group dropend py-3">
+                    <button type="button" class="btn btn-light dropdown-toggle side-btn" data-bs-toggle="dropdown" aria-expanded="false"  [disabled]="!currentUser._id">
+                      <img src="/assets/menu-1.png" width="100%" height="auto">
+                    </button>
+                    <ul class="dropdown-menu side-btn">
+                      <li class="text-center"><strong>Оперативні</strong></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('dashboards/storagemap',{})">Панорама диспетчера</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/commerse',{})">Комерційна панорама</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/component4',{})">Робочий обсяг по ПСГ</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/component--', {})" [hidden]="currentUser.role == 3">Прогноз поточної доби</button>                        
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropend py-3">
+                    <button type="button" class="btn btn-light dropdown-toggle side-btn" data-bs-toggle="dropdown" aria-expanded="false" [disabled]="!currentUser._id">
+                      <img src="/assets/menu-2.png" width="100%" height="auto">
+                    </button>
+                    <ul class="dropdown-menu side-btn">
+                      <li class="text-center"><strong>Режимні показники</strong></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/scada',{})">Технічна панорама</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/tovregim',{})">Динаміка показників ГТС</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/tovregmap1',{})">Контрольні показники ГТС</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/resource-gpa',{})">ГПА</button>                        
+                      </li>                      
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/component6',{})"  [hidden]="currentUser.role == 3">Споживання газу в Україні</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/flow-forecast-dd',{})"  >Споживання газу в Україні (new dd)</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/flow-forecast-hh',{})"  >Споживання газу в Україні (new hh)</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/agsi',{})">Показники ПСГ ЄС</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/wheathermap',{})">Погода</button>                        
+                      </li>
+                      <!--
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/actgascharts',{})">Тех-акт газ графік</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/wheathercharts',{})">Погода граф</button>                        
+                      </li>
+                      -->
+                    </ul>
+                  </div>
+                  <div class="btn-group dropend py-3">
+                    <button type="button" class="btn btn-light dropdown-toggle side-btn" data-bs-toggle="dropdown" aria-expanded="false"  [disabled]="!currentUser._id">
+                      <img src="/assets/menu-3.png" width="100%" height="auto">
+                    </button>
+                    <ul class="dropdown-menu side-btn">
+                      <li class="text-center"><strong>Звіти</strong></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/fbgpic1',{})">ВТВ</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/season-inject',{})">Сезон</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/seasonstats',{})">Фізичні показники ПСГ, max/min</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/seasons',{})">Сезони new</button>                        
+                      </li>
+                      
+                      <!--
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/actgas-seasons',{})">Акт. газ</button>                        
+                      </li>
+                      -->
+
+                    </ul>
+                  </div>
+                  <div class="btn-group dropend py-3">
+                    <button type="button" class="btn btn-light dropdown-toggle side-btn" data-bs-toggle="dropdown" aria-expanded="false"  [disabled]="!currentUser._id">
+                      <img src="/assets/menu-4.png" width="100%" height="auto">
+                    </button>
+                    <ul class="dropdown-menu side-btn">
+                      <li class="text-center"><strong>Нормативна документація</strong></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/nsi',{})">PDF</button>                        
+                      </li>
+                      <!--
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/popups/trend',{})">Trend</button>                        
+                      </li>
+                      -->
+                    </ul>
+                  </div>                 
+                  
+                  
+                  <div class="btn-group dropend py-3">
+                    <button type="button" class="btn btn-light dropdown-toggle side-btn" data-bs-toggle="dropdown" aria-expanded="false"  [hidden]="currentUser.role != 1">
+                      <i class="bi bi-person"></i> 
+                    </button>
+                    <ul class="dropdown-menu side-btn">
+                      <li class="text-center">Адмін панель</li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/users/list',{})">Користувачі</button>                        
+                      </li>
+                    </ul>
+                  </div>
+
+
+                  <div class="btn-group-vertical btn-group-sm btn-group-justified py-3" role="group" style="width: 100%;">
+                    <button type="button" class="btn mb-1 side-btn" (click)="goToLink('')">КІМ</button>
+                    <button type="button" class="btn mb-1 side-btn">ОАС</button>
+                    <button type="button" class="btn side-btn">АСК</button>  
+                  </div>
+
+                  <div class="btn-group-vertical btn-group-sm btn-group-justified py-3" role="group">
+                    <button *ngIf="!currentUser._id" type="button" class="btn mb-1 btn-block side-btn" (click)="onNavigate('/login',{})">
+                      <i class="bi bi-box-arrow-in-left"></i>Вхід
+                    </button>
+                    <button *ngIf="currentUser._id > 0" type="button" class="btn mb-1 btn-block side-btn" (click)="singOut()">
+                      <i class="bi bi-box-arrow-in-right"></i>Вийти
+                    </button>
+                  </div>
+
+
+                  <div class="btn-group-vertical btn-group-sm btn-group-justified py-3" role="group" style="width: 100%;">
+                    <button type="button" class="btn mb-1 side-btn" (click)="changeTheme()"><i class="bi bi-cloud-moon-fill"></i></button>
+                  </div>
+
+
+
+                </ul>
+                
+
+                 
+            </div>
+
+        <div class="col d-flex flex-column h-sm-100 main">
+            <main class="row overflow-auto">
+              <router-outlet></router-outlet>
+            </main>
+
+            <div id="spinner" class="spinner-border text-primary" role="status" *ngIf="(loader$ | async)">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
+        </div>       
+    </div>
+</div>
+
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas1" aria-labelledby="offcanvasExampleLabel" >
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+
+        <div *ngIf="currentUser._id">
+            <ngb-datepicker [(ngModel)]="selectedDay" (dateSelect)="clickSelectDay($event)"></ngb-datepicker>
+        </div>
+
+        <div>
+          <div class="btn-group-vertical btn-group-sm btn-group-justified py-3" role="group">
+            <button *ngIf="!currentUser._id" type="button" class="btn btn-outline-primary mb-1 side-btn" (click)="onNavigate('/login',{})">
+              <i class="bi bi-box-arrow-in-left"></i><span class="ps-2">{{ currentUser.name }}</span>
+            </button>
+            <button *ngIf="currentUser._id > 0" type="button" class="btn btn-outline-primary mb-1 side-btn" (click)="singOut()">
+              <span class="pe-2">{{ currentUser.name }} : Вийти</span><i class="bi bi-box-arrow-in-right"></i>
+            </button>
+          </div>          
+        </div>
+
+
+        <div class="btn-group  py-2">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle  side-btn" data-bs-toggle="dropdown" aria-expanded="false">
+            O
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('dashboards/storagemap',{})">Зберігання газу</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/component4',{})">Обсяг вільн потужн</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/commerse',{})">Комерційна панорама</button>                        
+            </li>
+          </ul>
+        </div>
+        <div class="btn-group  py-2">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle side-btn" data-bs-toggle="dropdown" aria-expanded="false">
+            Р
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/tovregim',{})">Динаміка P</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/tovregmap',{})">Показники роботи</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/actgascharts',{})">Тех-акт газ графік</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/agsi',{})">AGSI</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/scada',{})">SCADA</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/component6',{})">Порівняння споживання</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/wheathermap',{})">Погода карта</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/wheathercharts',{})">Погода граф</button>                        
+            </li>
+          </ul>
+        </div>
+        <div class="btn-group  py-2">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle side-btn" data-bs-toggle="dropdown" aria-expanded="false">
+            З
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/seasonstats',{})">Сезони</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/dashboards/fbgpic1',{})">ВТВ</button>                        
+            </li>
+
+          </ul>
+        </div>
+        <div class="btn-group  py-2">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle side-btn" data-bs-toggle="dropdown" aria-expanded="false">
+            H
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1 sub-menu-btn" (click)="onNavigate('/',{})"></button>                        
+            </li>
+
+
+          </ul>
+        </div>
+
+
+
+    </div>
+</div>
+

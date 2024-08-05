@@ -1,0 +1,7 @@
+<ul *ngFor="let node of rootnode" 
+        [class.nested]="nested" 
+        [class.active]="active" 
+        [class.isroot]="isroot">
+
+    <app-side-menu-tree-node [node]="node" (change)="leafClick($event)" ></app-side-menu-tree-node>
+</ul>

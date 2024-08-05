@@ -1,0 +1,55 @@
+.row-condesed {
+    line-height: 10px;
+    font-size: 0.8em;
+    color: white;
+}
+
+.card {
+    background-color: rgb(72, 93, 104);
+    border-radius: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+}
+
+.td-value {
+    color: #0bbbef;
+    font-size: 1.5em;
+    text-align: end;
+}
+
+.td-otbor-label {
+    width: 30px;
+    padding: 5px;
+    border-radius: 0.3em;
+    background-color: rgb(69, 149, 52);
+    text-align: center;
+    color: white;
+    font-size: large;    
+}
+
+.td-zakachka-label {
+    width: 30px;
+    padding: 5px;
+    border-radius: 0.3em;
+    background-color: rgb(234, 104, 76);
+    text-align: center;
+    color: white;
+    font-size: large;    
+
+}
+
+.inject {
+    color: rgb(234, 104, 76);
+    font-weight: bold;
+}
+
+.withd {
+    color: rgb(69, 149, 52);
+    font-weight: bold;
+}
+
+.neutr {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}

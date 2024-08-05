@@ -1,0 +1,26 @@
+.table-card {
+    width: 20%;
+    min-width: 200px;
+    font-size: 0.8rem;
+    padding-right: 5px;
+}
+.table4-card {
+    width: 40%;
+    min-width: 400px;
+    font-size: 0.8rem;
+    padding-right: 5px;
+}
+.svg-content{
+    width: 80%;
+    min-width: 300px;
+}
+
+th, td {
+    padding: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.td-value {
+    text-align: right;
+}

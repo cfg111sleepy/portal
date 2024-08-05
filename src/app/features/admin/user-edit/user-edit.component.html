@@ -1,0 +1,110 @@
+
+<div class="row">
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div *ngIf="user" class="card">
+      <form #frmUser="ngForm" id="frmGame" (ngSubmit)="save(frmUser)" novalidate>
+        
+      <input type="hidden" [ngModel]="user._id" name="_id" >        
+        <!--name-->
+        <div class="row mb-2">
+          <label class="form-label md-1" for="txtName1">Ім'я:</label>
+          <div>
+            <input type="text" id="txtName1" class="form-control" [ngModel]="user.name" name="name" required minlength="4" #name="ngModel">
+            <!--name validation msg-->
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+              <div *ngIf="name.errors?.['required']">
+                Ім'я обов'язково
+              </div>
+            </div>
+            <!--end name validation msg-->
+          </div>
+        </div>
+    
+        <!--email-->
+        <div class="row mb-2">
+          <label class="form-label md-1" for="txtName1">Email:</label>
+          <div>
+            <input type="email" id="txtName2" class="form-control" [ngModel]="user.login" name="login" required minlength="4" #login="ngModel" email="true">
+            <!--name validation msg-->
+            <div *ngIf="login.invalid && (login.dirty || login.touched)" class="alert alert-danger">
+              <div *ngIf="login.errors?.['required']">
+                Email обов'язково
+              </div>
+              <div *ngIf="login.errors?.['email']">
+                формат Email не вірний
+              </div>
+            </div>
+            <!--end name validation msg-->
+          </div>
+        </div>
+    
+    
+        <div class="row mb-2">
+          <label class="control-label md-1" for="txtName3">Роль:</label>
+          <div>
+            <select id="txtName3" [ngModel]="user.role" name="role" class="form-select" required #role="ngModel">
+            <option [ngValue]="undefined" disabled>Виберіть роль </option>
+            <option *ngFor="let role of roles" 
+              [value]="role._id" [selected]="role._id == user.role">
+              {{ role.name }}
+            </option>
+            </select>
+              <!--name validation msg-->
+              <div *ngIf="role.invalid" class="alert alert-danger">
+                  Роль обов'язково
+              </div>
+              <!--end name validation msg-->
+          </div>
+        </div>
+    
+        <div class="row mb-2">
+          <label class="control-label" for="txtName4">Профіль:</label>
+          <div>
+            <select id="txtName4" [ngModel]="user.profile" name="profile" class="form-select" required #profile="ngModel">
+            <option [ngValue]="undefined" disabled>Виберіть профіль </option>
+            <option *ngFor="let prof of profiles" 
+              [value]="prof._id" [selected]="prof._id == user.profile">
+              {{ prof.name }}
+            </option>
+            </select>
+              <!--name validation msg-->
+              <div *ngIf="profile.invalid" class="alert alert-danger">
+                Профіль обов'язково
+            </div>
+            <!--end name validation msg-->
+        </div>
+        </div>            
+    
+    
+        <!--is domain-->
+        <div class="row mb-4">
+          <div class="col">
+            <label class="control-label" for="txtName5">Домен УТГ:</label>
+          </div>
+          <div class="col">
+            <div class="form-check">        
+              <input type="checkbox" id="txtName5" class="form-check-input ng-touched" 
+                [ngModel]="user.is_domain" name="is_domain" [checked]="user.is_domain" >
+            </div>               
+          </div>           
+
+        </div>
+    
+        <div class="row mb-2">
+          <div class="d-grid gap-2 d-md-block">
+            <button type="submit" class="btn btn-primary mx-1">Зберегти</button>
+            <button type="button"  class="btn btn-secondary mx-1" (click)="back()">Назад</button>
+          </div>  
+        </div>
+    
+      </form>
+    </div>
+  </div>
+</div>
+
+      
+    
+    
+              
+            
+            

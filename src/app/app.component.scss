@@ -1,0 +1,72 @@
+.main {
+  //background-color: #e8e9e3;
+  background-color: var(--color-option-7);
+}
+
+/* this is needed to make the content scrollable on larger screens */
+@media (min-width: 576px) {
+  .h-sm-100 {
+      height: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .offcanvas{
+    width: 15% !important;
+  }  
+}
+
+@media (max-width: 576px) {
+  .offcanvas{
+    width: 70% !important;
+  }  
+}
+
+//This changes the width for all the offcanvas in the app
+  
+
+// If you are using multiple offcanvas in your app, add this
+//.offcanvas.offcanvas-start {
+//  width: 70% !important;
+//}
+//position refers to the position of the offcanvas i.e 'start'|'end'|'top'|'bottom'
+
+#spinner {
+  width: 10rem;
+  height: 10rem;
+  display: block;
+  position: fixed;
+  z-index: 1031; /* High z-index so it is on top of the page */
+  top: 50%;
+  right: 50%; /* or: left: 50%; */
+}
+
+.side-btn {
+  background-color: rgb(218,225,228); 
+  color: #0063af;
+}
+
+.sub-menu-btn {
+  background-color: rgb(199,206,216); 
+  color: #0063af;
+  width: 100%;
+  border-color: rgb(199,206,216);
+  text-align: start;
+  font-weight: bold;
+}
+
+.side-btn:hover, .side-btn:focus,  .side-btn.active, .open>.dropdown-toggle.side-btn {
+  color: black;
+  background-color: whitesmoke;
+  border-color: #0063af; 
+}
+
+.sub-menu-btn:hover, .sub-menu-btn:focus, .sub-menu-btn.active, .open>.dropdown-toggle.sub-menu-btn {
+  color: #fff;
+  background-color: #0063af;
+  border-color:  whitesmoke;
+}
+
+.dropdown-menu {
+  min-width:250px;
+}

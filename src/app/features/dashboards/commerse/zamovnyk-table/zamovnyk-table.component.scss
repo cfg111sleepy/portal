@@ -1,0 +1,22 @@
+.vert-cell {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    //text-orientation: upright;
+    //transform: rotate(90deg);
+    //transform-origin: left top 0;
+}
+
+td {
+    font-weight: bold;
+    text-align: center;
+}
+
+.withd {
+    color: rgb(155,23,45);
+    --bs-table-striped-color: rgb(155,23,45);
+}
+
+.inject {
+    color: rgb(69,149,52);
+    --bs-table-striped-color: rgb(69,149,52);
+}

@@ -1,0 +1,38 @@
+<div class="row py-3">
+    <div class="col-lg-3  col-sm-12 col-xs-12">
+    <select class="form-select" [(ngModel)]="selectedObject" (change)="changePsg()">
+        <option [ngValue]="undefined" disabled>Виберіть  ПСГ</option>
+        <option *ngFor="let psg of psgNsi" [value]="psg.object" [selected]="psg.object == selectedObject"> 
+            {{ psg.name }} 
+        </option>
+    </select>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive">
+          <table class="table table-light table-bordered table-sm table-striped">
+            <thead>
+              <tr>
+                <th>Сезон</th>
+                <th>Початок (факт)</th>
+                <th>Активний газ на початок, тис.м&#179;</th>
+                <th>Зміна за попередній сезон, тис.м&#179;</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of seasons">
+                    <td>{{row.state}}</td>
+                    <td>{{row.start | date : 'dd.MM.yyyy' }}</td>
+                    <td>{{row.act_gas | number:'4.3-3'}}</td>
+                    <td>{{row.change | number:'4.3-3'}}</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>    
+      </div>
+    </div>
+  </div>

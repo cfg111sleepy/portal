@@ -1,0 +1,25 @@
+<ng-template [ngIf]="node.childNodes.length>0" [ngIfElse]="leaf">
+    <li>
+        <span class="box" (click)="expanderClick(node)" [class.check-box]="node.expanded">
+            {{node.name}}
+        </span>
+        <app-side-menu-tree 
+                (change)="leafClick($event)"
+                [rootnode]="node.childNodes" 
+                [nested]="true" 
+                [active]="node.expanded"
+                [isroot]="false">
+        </app-side-menu-tree>
+    </li>
+</ng-template>
+   
+<ng-template #leaf> 
+    <li>
+        <a  (click)="leafClick(node)" [class.selected]="node.selected">
+            <i [ngClass]="node.icon ? 'bi '+ node.icon : ''">
+
+            </i>
+            {{node.name}}
+        </a>
+    </li> 
+</ng-template>

@@ -1,0 +1,29 @@
+<div class="container card">
+    <table>
+        <tr>
+            <td colspan="3">
+                <div [class]="active">
+                    <div class="col">
+                        <ng-content></ng-content>
+                    </div>    
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><div class="label">Парк ГПА</div></td>
+            <td><div class="label">В роботі</div></td>
+            <td><div class="big-label">{{work}}</div></td>
+        </tr>
+        <tr>
+            <td rowspan="2"><div class="big-number">{{park}}</div></td>
+            <td><div class="label">В резерві</div></td>
+            <td><div class="big-label">{{res}}</div></td>
+        </tr>
+        <tr>
+            <td><div class="label">В ремонті</div></td>
+            <td><div class="big-label">{{rep}}</div></td>
+        </tr>
+    </table>
+  
+
+</div>

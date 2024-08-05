@@ -1,0 +1,121 @@
+<div class="row py-3">
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+    <select class="form-select" [(ngModel)]="selectedObject" (change)="changePsg()">
+        <option [ngValue]="undefined" disabled>Виберіть  ПСГ</option>
+        <option *ngFor="let psg of state?.allPsgNsi" [value]="psg.object" [selected]="psg.object == selectedObject"> 
+            {{ psg.name }} 
+        </option>
+    </select>
+    </div>
+    <div class="col-lg-2  col-sm-12 col-xs-12">
+    <select class="form-select" [(ngModel)]="selectedSeason" (change)="changeSeason()">
+        <option [ngValue]="undefined" disabled>Виберіть сезон </option>
+        <option *ngFor="let season of state?.seasons" [value]="season?._id" [selected]="season._id == selectedSeason"> 
+            {{ season.state }} : {{ season.start | date: 'dd.MM.yyyy' }} ... {{ season.end | date: 'dd.MM.yyyy' }}
+        </option>
+    </select>
+    </div>
+</div>
+
+
+<h3 *ngIf="!state?.stats">
+    Виберіть ПСГ та сезон
+</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered table-sm py-3" *ngIf="state?.stats">
+    <thead class="table-warning">
+        <tr>
+            <th>Факт початок</th>
+            <th>Факт закінчення</th>
+            <th>Факт тривалість, діб</th>    
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="(isInject$ | async)" [data]="state?.stats?.in" app-season-periods-table-row></tr>
+        <tr *ngIf="(isWith$ | async)" [data]="state?.stats?.wi" app-season-periods-table-row></tr>
+    </tbody>
+</table>    
+</div>
+
+<div class="table-responsive">
+<table class="table table-bordered table-sm py-3" *ngIf="state?.stats">
+    <thead class="table-primary">
+        <tr>
+            <th>Тех.активний газ, початок, тис.м&#179;</th>
+            <th>Активний газ, початок, тис.м&#179;</th>
+            <th>Тех.активний газ, кінець, тис.м&#179;</th>
+            <th>Активний газ, кінець, тис.м&#179;</th>
+        </tr>        
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-end">
+                {{(state?.stats?.tact_gas_begin?.value) | number:'4.3-3'}}
+            </td>
+            <td class="text-end">
+                {{(state?.stats?.act_gas_begin?.value) | number:'4.3-3'}}
+            </td>
+            <td class="text-end">
+                {{(state?.stats?.tact_gas_end?.value) | number:'4.3-3'}}
+            </td>
+            <td class="text-end">
+                {{(state?.stats?.act_gas_end?.value) | number:'4.3-3'}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div class="table-responsive">
+<table class="table table-light table-bordered table-sm table-striped" *ngIf="state?.stats">
+    <thead class="table-success">
+        <tr [season]="season ?? undefined" app-season-stat-table-header></tr>    
+    </thead>
+
+    <tbody>
+
+        <ng-template [ngIf]="(isInject$ | async)">
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.in_ym" [data]="state?.stats?.in" [name]="'Закачка, тис.м&#179;'" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.in_ym" [data]="state?.stats?.in" [name]="'Закачка, max, тис.м&#179;/доба'" [fixed]="3" [key]="'max'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.in_ym" [data]="state?.stats?.in" [name]="'Закачка, min, тис.м&#179;/доба'" [fixed]="3" [key]="'min'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.pg_ym" [data]="state?.stats?.pg" [name]="'Паливний газ, тис.м&#179;'" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.vtv_in_ym" [data]="state?.stats?.vtv_in" [name]="'ВТВ загалом, тис.м&#179;'" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.in_samoplyv_ym" [data]="state?.stats?.in_samoplyv" [name]="'Закачка, самоплив, тис.м&#179; '" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.in_compress_ym" [data]="state?.stats?.in_compress" [name]="'Закачка, компресс, тис.м&#179; '" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.vtv_in_samoplyv_ym" [data]="state?.stats?.vtv_in_samoplyv" [name]="'ВТВ Закачка, самоплив, тис.м&#179; '" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.in_bad_ch_ym" [data]="state?.stats?.in_bad_ch" [name]="'Отримано неякісного г(по СН), тис.м&#179;'" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.in_bad_h2o_ym" [data]="state?.stats?.in_bad_h2o" [name]="'Отримано неякісного г(по Н2O), тис.м&#179;'" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>   
+        </ng-template>
+
+        <ng-template [ngIf]="(isWith$| async)">
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.wi_ym" [data]="state?.stats?.wi" [name]="'Відбір, тис.м&#179;'" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.wi_ym" [data]="state?.stats?.wi" [name]="'Відбір, max, тис.м&#179;/доба'" [fixed]="3" [key]="'max'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.wi_ym" [data]="state?.stats?.wi" [name]="'Відбір, min, тис.м&#179;/доба'" [fixed]="3" [key]="'min'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.pg_ym" [data]="state?.stats?.pg" [name]="'Паливний газ, тис.м&#179;'" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.vtv_wi_ym" [data]="state?.stats?.vtv_wi" [name]="'ВТВ загалом, тис.м&#179;'" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.wi_samoplyv_ym" [data]="state?.stats?.wi_samoplyv" [name]="'Відбір, самоплив, тис.м&#179; '" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.wi_compress_ym" [data]="state?.stats?.wi_compress" [name]="'Відбір, компресс, тис.м&#179; '" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.vtv_wi_samoplyv_ym" [data]="state?.stats?.vtv_wi_samoplyv" [name]="'ВТВ Відбір, самоплив, тис.м&#179; '" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.wi_bad_ch_ym" [data]="state?.stats?.wi_bad_ch" [name]="'Передано неякісного г(по СН), тис.м&#179;'" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+            <tr [season]="season ?? undefined" [dataYM]="state?.stats?.wi_bad_h2o_ym" [data]="state?.stats?.wi_bad_h2o" [name]="'Передано неякісного г(по Н2O), тис.м&#179;'" [fixed]="3" [key]="'sum'" app-season-stat-table-row></tr>
+        </ng-template>
+
+
+        <tr [season]="season ?? undefined" [dataYM]="state?.stats?.t_r_H2O_ym" [data]="state?.stats?.t_r_H2O" [name]="'Точка роси Н2О, max &#8451;'" [fixed]="1" [key]="'max'" app-season-stat-table-row></tr>
+        <tr [season]="season ?? undefined" [dataYM]="state?.stats?.t_r_H2O_ym" [data]="state?.stats?.t_r_H2O" [name]="'Точка роси Н2О, min &#8451;'" [fixed]="1" [key]="'min'" app-season-stat-table-row></tr>
+
+        <tr [season]="season ?? undefined" [dataYM]="state?.stats?.t_r_CH_ym" [data]="state?.stats?.t_r_CH" [name]="'Точка роси CH, max &#8451;'" [fixed]="1" [key]="'max'" app-season-stat-table-row></tr>
+        <tr [season]="season ?? undefined" [dataYM]="state?.stats?.t_r_CH_ym" [data]="state?.stats?.t_r_CH" [name]="'Точка роси CH, min &#8451;'" [fixed]="1" [key]="'min'" app-season-stat-table-row></tr>
+
+        <tr [season]="season ?? undefined" [dataYM]="state?.stats?.p_ym" [data]="state?.stats?.p" [name]="'Тиск ПВВГ, max, ксг/см2'" [fixed]="1" [key]="'max'" app-season-stat-table-row></tr>
+        <tr [season]="season ?? undefined" [dataYM]="state?.stats?.p_ym" [data]="state?.stats?.p" [name]="'Тиск ПВВГ, min, ксг/см2'" [fixed]="1" [key]="'min'" app-season-stat-table-row></tr>
+
+
+    </tbody>
+    
+</table>
+</div>
+
+
+

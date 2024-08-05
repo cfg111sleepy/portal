@@ -1,0 +1,32 @@
+<svg >
+  <g >
+    <rect [attr.x]="x-3" [attr.y]="y-18" [attr.width]="w+3" [attr.height]="h+33" stroke="grey" stroke-width="1" fill="none" rx="5" ry="5"/>
+    <rect [attr.x]="x-3" [attr.y]="y-18" [attr.width]="w+3" [attr.height]="h+33" [attr.fill]="fillColor" rx="5" ry="5"/>
+    <rect [attr.x]="x-1" [attr.y]="y-15" [attr.width]="w" [attr.height]="15" fill="rgb(161,180,190)" />
+
+    <text [attr.x]="x" [attr.y]="y" dy="-5" font-size=".7em"  fill="black"><ng-content></ng-content></text>
+    
+
+    <text [attr.x]="x" [attr.y]="y" dx="5" dy="15" fill="black">{{value}}</text>
+    <text [attr.x]="x" [attr.y]="y" dx="25" dy="27" fill="rgb(234,104,76)"  font-size=".7em">{{delta}}</text>
+    
+       
+    <text [attr.x]="x+w" [attr.y]="y" dx="-50" dy="10" font-size=".7em"  fill="black">{{maxDisp}}</text>
+    <text [attr.x]="x+w" [attr.y]="y" dx="-27" dy="10" font-size=".5em"  fill="black">{{eu}}</text>
+    
+    <rect [attr.x]="x+w-18" [attr.y]="y+12" [attr.width]="15" [attr.height]="15" fill="rgb(199,209,216)" rx="2" ry="2"
+      stroke="grey" stroke-width="1" (click)="onClick($event)" style="cursor:pointer;"/>
+    <text [attr.x]="x+w-12" [attr.y]="y+23" font-size=".7em"  fill="black" font-weight="bold">i</text>
+
+    <rect [attr.x]="x-1" [attr.y]="y+h" [attr.width]="w" height="11" stroke="grey" stroke-width="1" fill="SeaShell" rx="5" ry="5"/>
+
+    <rect [attr.x]="x" [attr.y]="y+h" [attr.width]="scaledValue" height="10" [attr.fill]="progressColor" rx="5" ry="5"/>
+    <rect [attr.x]="x" [attr.y]="y+h" [attr.width]="scaledValue1" height="10" fill="yellow"  rx="5" ry="5"/>
+
+
+    <text [attr.x]="x+w/2" [attr.y]="y+h" dx="-10" dy="8" fill="black" font-size=".6em">{{percentValue}} %</text> 
+
+
+  </g>
+</svg>
+

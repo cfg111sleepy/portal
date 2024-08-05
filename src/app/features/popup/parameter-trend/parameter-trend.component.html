@@ -1,0 +1,69 @@
+<div class="row py-1">
+    <div class="col">
+		<div  class="input-group">
+            <label for="dp1" class="col-form-label px-2 bg-secondary text-white">ВІД</label>
+			<input
+				class="form-control"
+				placeholder="yyyy-mm-dd"
+				name="dp1"
+                id="dp1"
+				[(ngModel)]="from"
+				ngbDatepicker
+				#d1="ngbDatepicker"
+                (dateSelect)="rangeChanged($event)"
+			/>
+            <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d1.toggle()" type="button"></button>
+		</div>
+
+    </div>
+    <div class="col">
+        <div class="input-group">
+			<label for="dp2" class="col-form-label px-2 bg-secondary text-white">ДО</label>
+			<input
+				class="form-control"
+				placeholder="yyyy-mm-dd"
+				name="dp2"
+                id="dp2"
+				[(ngModel)]="to"
+				ngbDatepicker
+				#d2="ngbDatepicker"
+                (dateSelect)="rangeChanged($event)"
+			/>
+            <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d2.toggle()" type="button"></button>
+		</div>
+
+    </div>
+</div>
+
+
+<div class="row py-1">
+    <div class="col">
+        <canvas id="trend1"
+        baseChart
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [type]="lineChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+    </canvas>
+    </div>
+</div>
+
+<div class="row py-1">
+    <div class="col">
+        <table class="table table-light table-bordered table-sm table-striped">
+            <thead>
+              <tr>
+                <th>Дата, час</th>
+                <th>Значення</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of table">
+                    <td>{{row.time_stamp | date:'dd.MM.yyyy HH:mm' }}</td>
+                    <td>{{row.value}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

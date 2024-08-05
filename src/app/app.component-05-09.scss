@@ -1,0 +1,42 @@
+.main {
+  background-color: #e8e9e3;
+}
+
+/* this is needed to make the content scrollable on larger screens */
+@media (min-width: 576px) {
+  .h-sm-100 {
+      height: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .offcanvas{
+    width: 15% !important;
+  }  
+}
+
+@media (max-width: 576px) {
+  .offcanvas{
+    width: 70% !important;
+  }  
+}
+
+//This changes the width for all the offcanvas in the app
+  
+
+// If you are using multiple offcanvas in your app, add this
+//.offcanvas.offcanvas-start {
+//  width: 70% !important;
+//}
+//position refers to the position of the offcanvas i.e 'start'|'end'|'top'|'bottom'
+
+#spinner {
+  width: 10rem;
+  height: 10rem;
+  display: block;
+  position: fixed;
+  z-index: 1031; /* High z-index so it is on top of the page */
+  top: 50%;
+  right: 50%; /* or: left: 50%; */
+}
+

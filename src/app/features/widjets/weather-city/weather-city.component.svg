@@ -1,0 +1,7 @@
+<svg (click)="onClick($event)" style="cursor:pointer;">
+  <g >
+    <text [attr.x]="x" [attr.y]="y" dy="0" font-size=".7em"  fill="black"><ng-content></ng-content></text>
+    <text [attr.x]="x" [attr.y]="y" dx="10" dy="-7" fill="black">{{value}}</text>   
+    <text [attr.x]="x" [attr.y]="y" dx="5" dy="9"  fill="black" font-size=".7em">{{delta}}</text>
+  </g>
+</svg>

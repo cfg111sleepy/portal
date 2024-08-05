@@ -1,0 +1,48 @@
+<div [class]="active">   
+    <div class="row">
+        <div class="col-5 label-to-bold">ГПА {{name}}</div>
+        <div class="col-7 label-to-bold">{{type}}</div>
+    </div>
+    <div class="row pt-1">
+        <div class="col-5">
+            <div class="label-to">TO {{rest_to_d}}</div>
+        </div>
+        <div class="col-5 nopadding">
+            <div class="progress label-to">
+                <div [class]="progress_to" [style.width]="cent_to_d"><span *ngIf="show_cent_inside_to">{{cent_to_d}}</span></div>
+                <span *ngIf="!show_cent_inside_to">&nbsp;{{cent_to_d}}</span>
+            </div>
+        </div>
+        <div class="col-2 nopadding">
+            <div class="label-to">{{res_to_d}}</div>
+        </div>
+    </div>
+    <div class="row pt-1">
+        <div class="col-5">
+            <div class="label-to">CP {{rest_cp_d}}</div>
+        </div>
+        <div class="col-5 nopadding">
+            <div class="progress label-to">
+                <div [class]="progress_cp" [style.width]="cent_cp_d"><span *ngIf="show_cent_inside_cp">{{cent_cp_d}}</span></div>
+                <span *ngIf="!show_cent_inside_cp">&nbsp;{{cent_cp_d}}</span>
+            </div>
+        </div>
+        <div class="col-2 nopadding">
+            <div class="label-to">{{res_to_d}}</div>
+        </div>
+    </div>
+    <div class="row py-1">
+        <div class="col-5">
+            <div class="label-to">KP {{rest_kp_d}}</div>
+        </div>
+        <div class="col-5 nopadding">
+            <div class="progress label-to">
+                <div [class]="progress_kp" [style.width]="cent_kp_d"><span *ngIf="show_cent_inside_kp">&nbsp;{{cent_kp_d}}</span></div>
+                <span *ngIf="!show_cent_inside_kp">&nbsp;{{cent_kp_d}}</span>
+              </div>
+        </div>
+        <div class="col-2 nopadding">
+            <div class="label-to">{{res_kp_d}}</div>
+        </div>
+    </div>
+</div>

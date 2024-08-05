@@ -1,0 +1,73 @@
+<div class="card" (click)="onClick()">
+    <table>
+        <tr class="card-header">
+            <td colspan="3">
+                <div class="card-header-title">{{country}}</div>
+            </td>
+            <td>
+                <div class="card-header-time">{{agsiValues?.gasDayStart}}</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="main-label">Акт.газ:</span>
+            </td>
+            <td>
+                <span class="akt-value">{{agsiValues?.gasInStorage}}</span>                
+            </td>
+            <td>
+                <span *ngIf="displayMeters" class="eunits">млрд м&#179;</span>
+                <span *ngIf="!displayMeters" class="eunits">ГВт</span>                    
+            </td>
+            <td class="td-bordered-center">
+                <span class="akt-value">{{agsiValues?.workingGasVolume}}</span>                                            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="main-label">Закачано:</span>
+            </td>
+            <td>
+                <span class="zakachka-value">{{agsiValues?.injection}}</span>
+            </td>
+            <td>
+                <span *ngIf="displayMeters" class="eunits">млн м&#179;</span>
+                <span *ngIf="!displayMeters" class="eunits">МВт</span>
+            </td>
+            <td>
+                <span  [class]="agsiValues?.wo_style">{{agsiValues?.injectionWithdraw}}</span>                
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="main-label">Відібрано:</span>
+            </td>
+            <td>
+                <span class="otbor-value">{{agsiValues?.withdrawal}}</span>
+            </td>
+            <td>
+                <span *ngIf="displayMeters" class="eunits">млн м&#179;</span>
+                <span *ngIf="!displayMeters" class="eunits">МВт</span>
+            </td>
+            <td>
+                <span  [class]="agsiValues?.wo_style">{{agsiValues?.trend}}%</span>                
+            </td>
+        </tr>
+    </table>
+    
+    <div class="px-1">
+        <div class="progress">
+            <div class="progress-bar gre" role="progressbar" [style]="agsiValues?.style">{{agsiValues?.full}}%</div>
+        </div>                
+    </div>
+
+    <div class="second-label px-1">
+        {{agsiValuesLastY?.gasInStorage}}
+        <span *ngIf="displayMeters" class="eunits">млрд м&#179;</span>
+        <span *ngIf="!displayMeters" class="eunits">ГВт</span>                    
+        ({{agsiValuesLastY?.full}}%)
+        {{agsiValuesLastY?.gasDayStart}}
+    </div>
+</div>

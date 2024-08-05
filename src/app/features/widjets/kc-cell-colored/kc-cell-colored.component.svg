@@ -1,0 +1,6 @@
+
+<svg (click)="onClick($event)" style="cursor:pointer;">
+  <g >
+        <text [attr.x]="x" [attr.y]="y" font-size="0.4em" [attr.fill]="fillColor" font-weight="bold">{{value}}</text>
+  </g>
+</svg>

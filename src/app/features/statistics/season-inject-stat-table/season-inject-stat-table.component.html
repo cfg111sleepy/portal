@@ -1,0 +1,250 @@
+<div class="row my-2">
+    <div class="col-lg-2  col-sm-4 col-xs-4">
+      <select class="form-select" aria-label="Рік" (change)="yearChanged($event)" [(ngModel)]="selectedYear">
+        <option selected disabled>рік</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option>
+        <option value="2029">2029</option>
+        <option value="2030">2030</option>
+      </select>        
+    </div> 
+</div> 
+
+<div class="row my-2">
+    <div class="col">
+        <div class="table-responsive">
+            <table class="table table-light table-bordered table-sm table-striped">
+                <thead>
+                    <tr>
+                    <th>Назва ПСГ</th>
+                    <th>Дата початку НП</th>
+                    <th  class="table-warning">ВТВ у НП, <small>тис.м&#179;</small></th>
+                    <th>Дата закінчення НП</th>
+                    <th>Дата початку<br>закачування (факт)</th>
+                    <th  class="table-info">Закачано, <small>тис.м&#179;</small></th>
+                    <th  class="table-warning">ВТВ під час закачування, <small>тис.м&#179;</small></th>
+                    <th>Дата закінчення<br>закачування (факт)</th>
+                    <th>Дата початку НП</th>
+                    <th  class="table-warning">ВТВ у НП, <small>тис.м&#179;</small></th>
+                    <th>Дата закінчення НП</th>                        
+                    </tr>
+
+                </thead>            
+                <tbody>
+                    <tr>
+                        <td>14-15 гг Угерського ПСГ</td>
+                        <td>{{getValueD(906023,"np1_start")}}</td>
+                        <td>{{getValueF(906023,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(906023,"np1_end")}}</td>
+                        <td>{{getValueD(906023,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(906023,"injected",3)}}</td>
+                        <td>{{getValueF(906023,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(906023,"end_inject_fact")}}</td>
+                        <td>{{getValueD(906023,"np2_start")}}</td>
+                        <td>{{getValueF(906023,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(906023,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>Більче-Волицько -Угерське ПСГ:</td>
+                        <td>{{getValueD(906024,"np1_start")}}</td>
+                        <td>{{getValueF(906024,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(906024,"np1_end")}}</td>
+                        <td>{{getValueD(906024,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(906024,"injected",3)}}</td>
+                        <td>{{getValueF(906024,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(906024,"end_inject_fact")}}</td>
+                        <td>{{getValueD(906024,"np2_start")}}</td>
+                        <td>{{getValueF(906024,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(906024,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;-Більче-Волицьке (ГЗП1,3,4)</td>
+                        <td>{{getValueD(906035,"np1_start")}}</td>
+                        <td>{{getValueF(906035,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(906035,"np1_end")}}</td>
+                        <td>{{getValueD(906035,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(906035,"injected",3)}}</td>
+                        <td>{{getValueF(906035,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(906035,"end_inject_fact")}}</td>
+                        <td>{{getValueD(906035,"np2_start")}}</td>
+                        <td>{{getValueF(906035,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(906035,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;-Угерське 16 гор. (ГЗП2)</td>
+                        <td>{{getValueD(906026,"np1_start")}}</td>
+                        <td>{{getValueF(906026,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(906026,"np1_end")}}</td>
+                        <td>{{getValueD(906026,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(906026,"injected",3)}}</td>
+                        <td>{{getValueF(906026,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(906026,"end_inject_fact")}}</td>
+                        <td>{{getValueD(906026,"np2_start")}}</td>
+                        <td>{{getValueF(906026,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(906026,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>Дашавське ПСГ</td>
+                        <td>{{getValueD(906022,"np1_start")}}</td>
+                        <td>{{getValueF(906022,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(906022,"np1_end")}}</td>
+                        <td>{{getValueD(906022,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(906022,"injected",3)}}</td>
+                        <td>{{getValueF(906022,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(906022,"end_inject_fact")}}</td>
+                        <td>{{getValueD(906022,"np2_start")}}</td>
+                        <td>{{getValueF(906022,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(906022,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>Опарське ПСГ</td>
+                        <td>{{getValueD(906021,"np1_start")}}</td>
+                        <td>{{getValueF(906021,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(906021,"np1_end")}}</td>
+                        <td>{{getValueD(906021,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(906021,"injected",3)}}</td>
+                        <td>{{getValueF(906021,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(906021,"end_inject_fact")}}</td>
+                        <td>{{getValueD(906021,"np2_start")}}</td>
+                        <td>{{getValueF(906021,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(906021,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>Богородчанське ПСГ</td>
+                        <td>{{getValueD(903031,"np1_start")}}</td>
+                        <td>{{getValueF(903031,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(903031,"np1_end")}}</td>
+                        <td>{{getValueD(903031,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(903031,"injected",3)}}</td>
+                        <td>{{getValueF(903031,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(903031,"end_inject_fact")}}</td>
+                        <td>{{getValueD(903031,"np2_start")}}</td>
+                        <td>{{getValueF(903031,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(903031,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>Олишівське ПСГ</td>
+                        <td>{{getValueD(901033,"np1_start")}}</td>
+                        <td>{{getValueF(901033,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(901033,"np1_end")}}</td>
+                        <td>{{getValueD(901033,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(901033,"injected",3)}}</td>
+                        <td>{{getValueF(901033,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(901033,"end_inject_fact")}}</td>
+                        <td>{{getValueD(901033,"np2_start")}}</td>
+                        <td>{{getValueF(901033,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(901033,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>Мринське ПСГ</td>
+                        <td>{{getValueD(901032,"np1_start")}}</td>
+                        <td>{{getValueF(901032,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(901032,"np1_end")}}</td>
+                        <td>{{getValueD(901032,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(901032,"injected",3)}}</td>
+                        <td>{{getValueF(901032,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(901032,"end_inject_fact")}}</td>
+                        <td>{{getValueD(901032,"np2_start")}}</td>
+                        <td>{{getValueF(901032,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(901032,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>Солохівське ПСГ</td>
+                        <td>{{getValueD(901031,"np1_start")}}</td>
+                        <td>{{getValueF(901031,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(901031,"np1_end")}}</td>
+                        <td>{{getValueD(901031,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(901031,"injected",3)}}</td>
+                        <td>{{getValueF(901031,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(901031,"end_inject_fact")}}</td>
+                        <td>{{getValueD(901031,"np2_start")}}</td>
+                        <td>{{getValueF(901031,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(901031,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>Пролетарське ПСГ</td>
+                        <td>{{getValueD(902031,"np1_start")}}</td>
+                        <td>{{getValueF(902031,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(902031,"np1_end")}}</td>
+                        <td>{{getValueD(902031,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(902031,"injected",3)}}</td>
+                        <td>{{getValueF(902031,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(902031,"end_inject_fact")}}</td>
+                        <td>{{getValueD(902031,"np2_start")}}</td>
+                        <td>{{getValueF(902031,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(902031,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>Кегичівське ПСГ</td>
+                        <td>{{getValueD(902032,"np1_start")}}</td>
+                        <td>{{getValueF(902032,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(902032,"np1_end")}}</td>
+                        <td>{{getValueD(902032,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(902032,"injected",3)}}</td>
+                        <td>{{getValueF(902032,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(902032,"end_inject_fact")}}</td>
+                        <td>{{getValueD(902032,"np2_start")}}</td>
+                        <td>{{getValueF(902032,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(902032,"np2_end")}}</td>
+                    </tr>
+                    <tr>
+                        <td>Краснопопівське ПСГ</td>
+                        <td>{{getValueD(905031,"np1_start")}}</td>
+                        <td>{{getValueF(905031,"vtv_np1",3)}}</td>
+                        <td>{{getValueD(905031,"np1_end")}}</td>
+                        <td>{{getValueD(905031,"start_inject_fact")}}</td>    
+                        <td>{{getValueF(905031,"injected",3)}}</td>
+                        <td>{{getValueF(905031,"vtv_inj",3)}}</td>
+                        <td>{{getValueD(905031,"end_inject_fact")}}</td>
+                        <td>{{getValueD(905031,"np2_start")}}</td>
+                        <td>{{getValueF(905031,"vtv_np2",3)}}</td>
+                        <td>{{getValueD(905031,"np2_end")}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<h4>Сезони ПСГ УТГ, загалом</h4>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="table-responsive">
+          <table class="table table-light table-bordered table-sm table-striped table-fit">
+            <thead>
+              <tr>
+                <th>Сезон <br> &nbsp;</th>
+                <th>Початок <br>(факт)</th>
+                <th>Активний газ на<br>початок тис м&#179;</th>
+                <th>Відібрано/Закачано,<br> тис м&#179;</th>
+                <th>Активний газ на<br>кінець тис м&#179;</th>
+                <th>Кінець <br>(факт)</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of seasons2">
+                    <td>{{row.state}}</td>
+                    <td>{{row.start | date : 'dd.MM.yyyy' }}</td>
+                    <td>{{row.act_gas | number:'4.3-3' }}</td>
+                    <td>{{row.change | number:'4.3-3' }}</td>
+                    <td>{{row.act_end | number:'4.3-3'}}</td>
+                    <td>{{row.end | date : 'dd.MM.yyyy' }}</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>    
+      </div>
+    </div>

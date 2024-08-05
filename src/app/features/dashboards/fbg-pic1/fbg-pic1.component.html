@@ -1,0 +1,403 @@
+
+<div class="row my-2">
+  <div class="col-lg-2  col-sm-4 col-xs-4">
+    <select class="form-select" aria-label="Рік" (change)="yearChanged($event)" [(ngModel)]="selectedYear">
+      <option selected disabled>рік</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      <option value="2028">2028</option>
+      <option value="2029">2029</option>
+      <option value="2030">2030</option>
+    </select>        
+  </div>  
+  <div class="col-lg-2  col-sm-4 col-xs-4">
+    <select class="form-select" aria-label="Місяць"  (change)="monthChanged($event)"  [(ngModel)]="selectedMonth">
+      <option selected disabled>місяць</option>
+      <option value="0">Січень</option>
+      <option value="1">Лютий</option>
+      <option value="2">Березень</option>
+      <option value="3">Квітень</option>
+      <option value="4">Травень</option>
+      <option value="5">Червень</option>
+      <option value="6">Липень</option>
+      <option value="7">Серпень</option>
+      <option value="8">Вересень</option>
+      <option value="9">Жовтень</option>
+      <option value="10">Листопад</option>
+      <option value="11">Грудень</option>
+    </select>        
+  </div>  
+
+</div>
+
+<div class="row my-1">
+ 
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">АТ "Укртрансгаз", тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'16006007.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'16006007.63'" ></app-op-data-line1-chart-days-x>
+    </div>
+  </div>
+
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ОПЕРАТОР ГАЗОСХОВИЩ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'16006004.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'16006004.63'" ></app-op-data-line1-chart-days-x>
+    </div>
+  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ УГЕРСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'16103100.63'"></tr>
+      </table>
+            <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'16103100.63'" ></app-op-data-line1-chart-days-x>
+    </div>
+  </div>
+  
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ БІЛЬЧЕ-ВОЛИЦЬКО-УГЕРСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'6103006.63'"></tr>
+      </table>
+            <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'6103006.63'" ></app-op-data-line1-chart-days-x>
+    </div>
+  </div>
+
+</div>
+
+<div class="row my-1">
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ ДАШАВСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'6080582.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'6080582.63'" ></app-op-data-line1-chart-days-x>
+    </div>
+  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ ОПАРСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'6090539.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'6090539.63'"></app-op-data-line1-chart-days-x>
+    </div>  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ БОГОРОДЧАНСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'7040100.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'7040100.63'"></app-op-data-line1-chart-days-x>
+    </div>  
+  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ ОЛИШІВСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'1093146.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'1093146.63'"></app-op-data-line1-chart-days-x>
+    </div>  
+  </div>
+
+
+</div>
+
+<div class="row my-1">
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ МРИНСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'11091091.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'11091091.63'"></app-op-data-line1-chart-days-x>
+    </div>  
+  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ СОЛОХІВСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'1100434.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'1100434.63'"></app-op-data-line1-chart-days-x>
+    </div>  
+  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ ПРОЛЕТАРСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'12110242.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'12110242.63'"></app-op-data-line1-chart-days-x>
+    </div>
+  </div>
+  
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ КЕГИЧІВСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'2110441.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'2110441.63'"></app-op-data-line1-chart-days-x>
+    </div>
+  </div>
+
+
+</div>
+
+<h5>Філії</h5>
+
+<div class="row my-1">
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ПСГ КРАСНОПОПІВСЬКЕ, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'2110489.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'2110489.63'" ></app-op-data-line1-chart-days-x>
+    </div>
+  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">Угерське ВВРіСП, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'16103047.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'16103047.63'"></app-op-data-line1-chart-days-x>
+    </div>  
+  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">Філія БМФ «Укргазпромбуд», тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'16103046.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'16103046.63'"></app-op-data-line1-chart-days-x>
+    </div>  
+  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">Філія ВРТП «Укргазенергосервіс», тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'1907020.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'1907020.63'"></app-op-data-line1-chart-days-x>
+    </div>  
+  </div>
+
+
+
+</div>
+
+<div class="row my-1">
+  
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">Філія «Укргазтехзв’язок», тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'1907040.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'1907040.63'"></app-op-data-line1-chart-days-x>
+    </div>  
+  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">ВЦТД «Техдіагаз», тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'1907010.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'1907010.63'"></app-op-data-line1-chart-days-x>
+    </div>  
+  </div>
+
+  <div class="col-lg-3  col-sm-12 col-xs-12">
+    <div class="card">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div class="card-title">Філія НДПІ транспорту газу, тис м&#179;</div>
+          </td>
+        </tr>
+        <tr app-vtv-psg-days-table-row-compact [stat]="statDataMap" [data]="dataMap" [key1]="'19800539.63'"></tr>
+      </table>
+      <app-op-data-line1-chart-days-x [data]="dataMap" [key1]="'19800539.63'"></app-op-data-line1-chart-days-x>
+    </div>  
+  </div>
+
+
+</div>
+
+
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-light table-bordered table-sm table-striped">
+          <thead>
+            <tr>
+              <th>Назва ПСГ</th>
+              <th>Всього з поч. року</th>
+              <th>Всього з поч. міс</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+              <th>9</th>
+              <th>10</th>
+              <th>11</th>
+              <th>12</th>
+              <th>13</th>
+              <th>14</th>
+              <th>15</th>
+              <th>16</th>
+              <th>17</th>
+              <th>18</th>
+              <th>19</th>
+              <th>20</th>
+              <th>21</th>
+              <th>22</th>
+              <th>23</th>
+              <th>24</th>
+              <th>25</th>
+              <th>26</th>
+              <th>27</th>
+              <th>28</th>
+              <th>29</th>
+              <th>30</th>
+              <th>31</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'16006004.63'" [title]="'Оператор ГСУ, всього ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'16102133.63'" [title]="'ПСГ Угерське ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'16102002.63'" [title]="'ПСГ Більче-Волицько-Угерське ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'17050111.63'" [title]="'ПСГ Дашавське ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'17060111.63'" [title]="'ПСГ Опарське ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'17040102.63'" [title]="'ПСГ Богородчанське ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'11093031.63'" [title]="'ПСГ Олишівське ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'11091091.63'" [title]="'ПСГ Мринське ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'11100431.63'" [title]="'ПСГ Солохівське ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'12110242.63'" [title]="'ПСГ Пролетарське ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'12110431.63'" [title]="'ПСГ Кегичівське ВТВ, тис.м3'"></tr>
+            <tr app-vtv-psg-days-table-row [stat]="statDataMap" [data]="dataMap" [key1]="'12110501.63'" [title]="'ПСГ Червонопопівське ВТВ, тис.м3'"></tr>
+          </tbody>
+        </table>
+      </div>    
+    </div>
+  </div>
+</div>  
+-->
+
+
+
+
+
+
+

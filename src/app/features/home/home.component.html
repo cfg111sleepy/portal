@@ -1,0 +1,277 @@
+<div class="row">
+    <div class="col-xxl-3 col-lg-4 col-sm-12 col-xs-12">
+        <div class="card">
+            <table class="table table-borderless table-sm  align-middle">
+                <tbody>    
+                    <tr colspan="2" class='text-white'>
+                        <th>КОМЕРЦІЙНІ</th>
+                    </tr>
+                    <tr>
+                        <td class="text-white">
+                            <i class="bi bi-clock-history"></i> годин залишилось
+                        </td>
+                        <td class="td-value">
+                            {{leftRenom}}
+                        </td>
+                    </tr> 
+                    
+                    <tr>
+                        <td class="text-white" >зберігається загалом, <small>тис м&#179;</small></td>
+                        <td>
+                            <span *ngIf="!select7_10" class="td-value" app-table-cell [key]="'9902302.63'" [data]="dataMap" [dt]="iso"></span>
+                            <span *ngIf="select7_10" class="td-value" app-table-cell [key]="'9902307.63'" [data]="dataMap" [dt]="iso"></span>    
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="text-white">активний газ, <small>тис м&#179;</small></td>
+                        <td>
+                            <span *ngIf="!select7_10"  class="td-value" app-table-cell [key]="'9902305.63'" [data]="dataMap" [dt]="iso"></span>
+                            <span *ngIf="select7_10"  class="td-value" app-table-cell [key]="'9902308.63'" [data]="dataMap" [dt]="iso"></span>    
+                        </td>
+                     </tr>
+                    
+                </tbody>   
+            </table>             
+        </div>
+    </div>
+
+    <div class="col-xxl-3  col-lg-4 col-sm-12 col-xs-12">
+      <div class="card">
+        <table class="table table-borderless table-sm  align-middle">
+            <tbody>
+
+            <tr class='text-white'>
+                <th colspan="2">ФІЗИЧНІ</th>
+            </tr>
+            <tr>
+                <td class="text-white">ГПА в роботі</td>
+                <td>
+                    <span class="td-value" app-table-cell-last [key]="'7000001.105'" [data]="dataMap" [fixed]="0"></span>    
+                </td>
+                
+            </tr>
+            <tr>
+                <td colspan="2" class="text-white">ПCГ в роботі</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="withd">
+                        ВІДБІР
+                    </div>                        
+                </td>
+                <td>
+                    <span class="td-value" app-table-cell-last [key]="'7000001.108'" [data]="dataMap" [fixed]="0"></span>                    
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="inject">
+                        ЗАКАЧКА
+                    </div>                    
+                </td>
+                <td>
+                    <span class="td-value" app-table-cell-last [key]="'7000001.107'" [data]="dataMap" [fixed]="0"></span>                     
+                </td>                                                       
+            </tr>                
+            <tr>
+                <td>
+                    <div class="neutr">
+                        НЕЙТР. ПЕРІОД
+                    </div>                    
+                </td>
+                <td>
+                    <span class="td-value" app-table-cell-last [key]="'7000001.99'" [data]="dataMap" [fixed]="0"></span>                     
+                </td>                                                       
+            </tr>                
+            <tr>
+                <td class="text-white">ПCГ в роботі, &nbsp;&nbsp;&sum;</td>
+                <td>
+                    <span class="td-value" app-table-cell-last [key]="'7000001.106'" [data]="dataMap" [fixed]="0"></span>        
+                </td>               
+            </tr>
+
+            <tr>
+                <td class="text-white">ОБР на місяць, <small>тис м&#179;</small></td>
+                <td>
+                    <span class="td-value"  app-table-cell [key]="'611011.1068'" [data]="dataMap" [dt]="iso" [k]="0.001"></span>
+                </td>                
+             </tr>
+             <tr>
+                <td class="text-white">щоденний ОБР, <small>тис м&#179;</small></td>
+                <td>
+                   <span class="td-value"  app-table-cell [key]="'611010.1063'" [data]="dataMap" [dt]="iso" [k]="0.001"></span> 
+                </td>                
+             </tr>          
+         
+             <tr>
+                <td class="text-white">обсяг газу на ВТВ, <small> м&#179;</small></td>
+                <td>
+                    <span class="td-value"  app-table-cell [key]="'611095.1068'" [data]="dataMap" [dt]="iso" [b]="-15511.805"></span>
+                </td>                
+             </tr>
+
+             <tr>
+                <td class="text-white">загальне споживання, <small>тис м&#179;/год</small></td>
+                <td>
+                    <span class="td-value"  app-table-cell-last [key]="'9900405.8'" [data]="dataMap" ></span>
+                </td>                
+             </tr>
+
+             <tr>
+                <td class="text-white">t повітря загалом, <small>середня,&#x2103;</small></td>
+                <td>
+                    <span class="td-value"  app-table-cell-last [key]="'25.3'" [data]="dataMap"></span>                    
+                </td>
+             </tr>
+
+
+            <tr class='row-condesed'>
+                <td colspan="2">    
+                    <span app-table-cell-last [key]="'9900405.8'" [data]="dataMap" [field]="'time_stamp'"></span>
+                </td>                                
+            </tr>
+
+            </tbody>   
+        </table> 
+      </div>
+    </div>
+
+    <div class="col-xxl-3 col-lg-4  col-sm-12 col-xs-12">
+        <div class="card">
+            <table class="table table-borderless table-sm  align-middle">
+                <tbody>
+    
+                <tr>
+                    <th class='text-white' colspan="4">МИТТЄВІ ДАНІ</th>
+                </tr>
+                <tr  class="row-condesed">
+                    <td></td>
+                    <td>тис м&#179;/год</td>
+                    <td>млн м&#179;/д</td>
+                    <td>млн м&#179;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="withd">
+                            ВІДБІР
+                        </div>                        
+                    </td>
+                    <td>
+                        <span class="td-value" app-table-cell-last [key]="'7000001.35'" [data]="dataMap"></span>                         
+                    </td>
+                    <td>
+                        <span class="td-value" app-table-cell-last [key]="'7000001.37'" [data]="dataMap"></span>
+                    </td>   
+                    <td>
+                        <span class="td-value" app-table-cell-last [key]="'7000001.40'" [data]="dataMap"></span>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="inject">
+                            ЗАКАЧКА
+                        </div>                    
+                    </td>
+                    <td>
+                        <span class="td-value" app-table-cell-last [key]="'7000001.36'" [data]="dataMap"></span>                        
+                    </td>
+                    <td>
+                        <span class="td-value" app-table-cell-last [key]="'7000001.38'" [data]="dataMap"></span>
+                    </td>
+                    <td>
+                        <span class="td-value" app-table-cell-last [key]="'7000001.39'" [data]="dataMap"></span>
+                    </td>                   
+                </tr>
+                <tr>
+                    <td colspan="3" class="text-white">відібрано з поч. доби</td>
+                    <td>
+                        <span class="td-value" app-table-cell-last [key]="'7000001.42'" [data]="dataMap" [k]="0.001"></span>
+                    </td>                    
+                </tr>               
+                <tr>
+                    <td colspan="3" class="text-white">закачано з поч. доби</td>
+                    <td>
+                        <span class="td-value" app-table-cell-last [key]="'7000001.41'" [data]="dataMap" [k]="0.001"></span>    
+                    </td>                    
+                </tr>
+                <tr class="row-condesed">
+                    <td colspan="4">
+                        <span  app-table-cell-last [key]="'7000001.41'" [data]="dataMap" [field]="'time_stamp'"></span>
+                    </td>                                        
+                </tr>
+                </tbody>   
+            </table> 
+        </div>    
+    </div>
+
+    <div class="col-xxl-3  col-lg-4 col-sm-12 col-xs-12">
+        <div class="card">
+            <table class="table table-borderless table-sm align-middle">
+                <tbody>
+                    <tr>
+                        <th class="text-white" colspan="2">З ПОЧАТКУ ПОТОЧНОГО МІСЯЦЯ</th>
+                     </tr>
+                     <tr>
+                        <td class="text-white">комерційні потоки</td>
+                        <td class="text-white"><small>тис м&#179;</small></td>
+                     </tr>
+                     <tr>
+                        <td class="text-white">закачка(+)/відбір(-)</td>
+                        <td>
+                            <span class="td-value"  app-table-sub-cell [key1]="'611012.67'" [key2]="'611013.67'" [data]="dataMap" [dt]="iso"></span>
+                        </td>                        
+                     </tr>
+                     <tr>
+                        <td class="text-white">закачка в ПСГ</td>
+                        <td>
+                            <span  class="td-value" app-table-cell [key]="'611012.67'" [data]="dataMap" [dt]="iso"></span>
+                        </td>                        
+                     </tr>
+                     <tr>
+                        <td class="text-white">в т.ч. імпорт</td>
+                        <td>
+                           <span  class="td-value" app-table-cell [key]="'611023.67'" [data]="dataMap" [dt]="iso"></span> 
+                        </td>                        
+                     </tr>
+                     <tr>
+                        <td class="text-white">відбір із ПСГ</td>
+                        <td>
+                            <span  class="td-value" app-table-cell [key]="'611013.67'" [data]="dataMap" [dt]="iso"></span>
+                        </td>                        
+                     </tr>
+                     <tr>
+                        <td class="text-white">в т.ч реекспорт</td>
+                        <td>
+                            <span  class="td-value" app-table-cell [key]="'611022.67'" [data]="dataMap" [dt]="iso"></span>
+                        </td>                        
+                     </tr>               
+                     <tr>
+                        <td class="text-white" colspan="2">технічні потоки</td>
+                     </tr>
+                     <tr>
+                        <td class="text-white">відбір із ПСГ</td>
+                        <td>
+                            <span  class="td-value" app-table-cell [key]="'7000001.904'" [data]="dataMap" [dt]="iso"></span>
+                        </td>                        
+                     </tr>
+                     <tr>
+                        <td class="text-white">закачка в ПСГ</td>
+                        <td>
+                            <span  class="td-value" app-table-cell [key]="'7000001.903'" [data]="dataMap" [dt]="iso"></span>
+                        </td>                        
+                     </tr>
+              
+                    <tr class='row-condesed'>
+                        <td colspan="3">
+                            <span  app-table-cell-last [key]="'7000001.106'" [data]="dataMap" [field]="'time_stamp'"></span>
+                        </td>                    
+                    </tr>
+                </tbody>   
+            </table>             
+        </div>
+    </div>
+</div>
+
+
+

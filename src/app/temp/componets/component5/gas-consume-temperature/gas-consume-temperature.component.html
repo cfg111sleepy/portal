@@ -1,0 +1,34 @@
+<table class="table table-sm table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Лінія</th>
+            <th>Дата</th>
+            <th>Споживання ГРС<br>ТОВ ОГТСУ<br>тис м3</th>
+            <th>&Delta;<br> тис м3</th>
+            <th>Споживання<br>Україна, загальне<br>тис м3</th>            
+            <th>Видобуток газу Україна<br>тис м3</th>
+            <th>Зміна МС<br>тис м3</th>
+            <th>Зміна ПСГ (фіз баланс)<br>тис м3</th>
+            <th>Т пов сер<br>&deg;С</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of table">
+            <td>
+                <div [class]="row.color">&nbsp;</div>
+            </td>
+            <td>{{row.date}}</td>
+            <td>{{row.tov_qs}}</td>
+            <td>{{row.delta_qs}}</td>
+            <td>{{row.total_qs}}</td>            
+            <td>{{row.vydobs}}</td>
+            <td>{{row.zmina_mcs}}</td>
+            <td>{{row.zmina_psgs}}</td>
+            <td>{{row.t_avgs}}</td>
+            <td class="p-0">
+                <button type="button" class="btn cmd-btn" (click)="deleteRow(row.time)"><i class="bi bi-x"></i></button>                
+            </td>
+        </tr>
+    </tbody>
+</table>

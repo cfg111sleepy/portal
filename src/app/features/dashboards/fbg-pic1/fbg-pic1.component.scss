@@ -1,0 +1,19 @@
+.card {
+    min-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 0.5em;
+    background-color: rgb(161, 180, 190);
+}
+
+th:first-child, td:first-child
+{
+  position:sticky;
+  left:0px;
+
+}
+
+.card-title {
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}

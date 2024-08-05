@@ -1,0 +1,94 @@
+.card {
+    display: block;
+    margin: 0.2em;
+    position: relative;
+    border: 0;
+    padding: 0;
+}
+
+
+th, td {
+    padding: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+}
+
+.table-card {
+    font-size: 0.8rem;
+    padding-right: 5px;
+}
+
+
+.card-1 {
+    border-radius: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+    background-color: var(--color-option-2);
+}
+
+.card-header {
+    padding: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.card-label {
+    color: var(--text-color);
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.card-parameter {
+    border-radius: 1em;
+    background-color: var(--color-option-6);
+    padding: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+    width: fit-content;
+}
+
+.card-parameter-chart-container {
+    position: relative;
+}
+
+.card-adds {
+    margin-top: -15px;
+}
+
+.card-footer {
+    color: var(--text-color);
+    text-align: end;
+}
+
+.text-accent-1 {
+    color: var(--color-option-3);
+    font-weight: bold;
+}
+.text-accent-2 {
+    color: var(--color-option-5);
+    font-weight: bold;
+}
+.text-accent-3 {
+    color: var(--color-option-4);
+    font-weight: bold;
+}
+
+.text-main {
+    font-size: xx-large;
+}
+
+.text-second {
+    font-size: large;
+}
+
+.text-3 {
+    font-size: 0.8em;
+}
+
+.card-chart {
+
+}

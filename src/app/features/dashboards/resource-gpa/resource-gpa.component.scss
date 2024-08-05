@@ -1,0 +1,27 @@
+.card {
+    border-radius: 0.5em;
+}
+
+.header {
+    text-align: center;
+    background-color: var(--color-option-2);
+    font-size: 1em;
+    color: var(--color-option-14);
+    font-weight: bold;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+ table{
+    width:100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+ }
+
+ td {
+    padding-top: 1px;
+    padding-right: 5px;
+ }

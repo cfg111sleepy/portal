@@ -1,0 +1,17 @@
+<svg >
+    <g >
+      <rect [attr.x]="x-3" [attr.y]="y-18" [attr.width]="w+3" [attr.height]="h+33" stroke="grey" stroke-width="1" fill="none" rx="5" ry="5"/>
+      <rect [attr.x]="x-3" [attr.y]="y-18" [attr.width]="w+3" [attr.height]="h+33" [attr.fill]="fillColor" rx="5" ry="5"/>
+      <rect [attr.x]="x-1" [attr.y]="y-15" [attr.width]="w" [attr.height]="25" fill="rgb(161,180,190)" />
+  
+      <text [attr.x]="x" [attr.y]="y" dy="-5" font-size=".7em"  fill="black"><ng-content></ng-content></text>
+      <text [attr.x]="x" [attr.y]="y" dy="5" font-size=".7em"  fill="black">{{season}} залишилось</text>
+  
+      <text [attr.x]="x" [attr.y]="y" dx="30" dy="40" fill="black" font-size="2em" >{{value}}</text>
+
+      <text [attr.x]="x+w" [attr.y]="y" dx="-27" dy="25" font-size=".7em"  fill="black">діб</text>
+
+    </g>
+  </svg>
+  
+  

@@ -1,0 +1,92 @@
+<div class="row my-2">
+    <div class="col-lg-2  col-sm-4 col-xs-4">
+      <select class="form-select" aria-label="Сезон" [(ngModel)]="selectedObject" (change)="changePsg()">
+        <option  selected disabled>Сезон...</option>
+        <option *ngFor="let s of season_select" [value]="s.key">{{s.option}}</option>
+
+      </select>        
+    </div> 
+</div> 
+
+<div class="row">
+
+  <div class="col-xxl-3  col-lg-4  col-sm-12 col-xs-12" *ngFor="let season of seasons">
+
+    <div class="card">
+      <table class="table table-borderless table-sm  align-middle">
+          <tbody>
+
+          <tr>
+              <th class="text-white" colspan="2">{{season.name}}</th>
+          </tr>
+          <tr class='row-condesed'>
+              <td>
+                <i class="bi bi-calendar4"></i> 
+                {{season.start | date : 'dd.MM.yyyy'}} .. {{season.end | date : 'dd.MM.yyyy'}}
+              </td>
+              <td class="text-end">
+                <i class="bi bi-stopwatch-fill"></i>
+                {{season.work_days}} з {{season.total_days}}
+              </td>
+          </tr>
+          <tr class='row-condesed'>
+            <td> 
+              <i class="bi bi-graph-up-arrow"></i>
+              {{season.act_gas_begin| number:'4.3-3'}}
+            </td>
+            <td class="text-end">
+              <i class="bi bi-graph-down-arrow"></i>
+              {{season.act_gas_end| number:'4.3-3'}}
+              <span *ngIf="season.object == 906041">*</span>
+            </td>
+        </tr>
+          <tr class='row-condesed'>
+            <td>
+              <i class="bi bi-arrow-left-right"></i>
+              {{season.WI| number:'4.3-3'}}
+             </td>
+            <td class="text-end">
+              <i class="bi bi-speedometer2"></i>
+              {{season.BTB| number:'4.3-3'}}
+            </td>
+          </tr>
+                
+          </tbody>   
+      </table>             
+    </div>
+  </div>  
+
+</div>
+
+<div class="row py-3">
+  <div class="col">
+    <i class="bi bi-calendar4"></i>
+    Дати початку і кінця сезону
+  </div>  
+  <div class="col">
+    <i class="bi bi-stopwatch-fill"></i>
+    К-ть днів сезону (фактично днів  проробленої  роботи на загальну кількість днів сезону)
+  </div> 
+  <div class="col">
+    <i class="bi bi-graph-up-arrow"></i>
+    Активний газ на початок сезону
+  </div> 
+  <div class="col">
+    <i class="bi bi-arrow-left-right"></i>
+    Закачано/відібрно за сезон
+  </div> 
+  <div class="col">
+    <i class="bi bi-graph-down-arrow"></i>
+    Активний газ на кінець сезону
+  </div> 
+  <div class="col">
+    <i class="bi bi-speedometer2"></i>
+    ВТВ газу за сезон
+  </div> 
+</div>
+
+<div class="row py-3">
+  <div class="col">
+    * - Активні об'єми з Вергунським ПСГ (175 863,684 тис.м3)
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<svg>
+  <g >
+    <text [attr.x]="x" [attr.y]="y" dy="-5" font-size=".7em"  fill="black"><ng-content></ng-content></text>
+    <rect [attr.x]="x" [attr.y]="y" [attr.width]="w" [attr.height]="h" [attr.fill]="fillColor" (click)="onClick()" />
+    <text [attr.x]="x" [attr.y]="y" dx="5" dy="15" fill="black">{{value}}</text>
+    <text [attr.x]="x" [attr.y]="y" dx="25" dy="27" [attr.fill]="fillDelta" font-size=".7em">{{delta}}</text>
+    <rect [attr.x]="x" [attr.y]="y" [attr.width]="w" [attr.height]="h" stroke="grey" stroke-width="1" fill="none" />
+    <text [attr.x]="x" [attr.y]="y" dx="65" dy="20" font-size=".7em"  fill="black">{{eu}}</text>
+  </g>
+</svg>

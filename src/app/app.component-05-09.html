@@ -1,0 +1,261 @@
+
+<button class="btn btn-primary-outline d-block d-sm-none sticky-top" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas1" aria-controls="offcanvas1">
+  MENU
+</button>
+
+<div class="container-fluid overflow-hidden root">  
+    <div class="row vh-100 overflow-auto">
+            <div class="d-flex flex-column d-none d-lg-block align-items-center" style="width: 5rem;">
+
+                <ul class="nav">
+                  <img class="py-3" src="/assets/disp-logo-temp.png" width="60" height="100"/>
+              
+                  <div class="btn-group dropend py-3">
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div><i class="bi bi-calendar3"></i></div>             
+                      {{selectedDay.day}}
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li class="text-center">Календар</li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <div *ngIf="currentUser._id">
+                          <ngb-datepicker [(ngModel)]="selectedDay" (dateSelect)="clickSelectDay($event)"></ngb-datepicker>
+                      </div>      
+                      </li>
+                    </ul>
+                  
+                  </div>
+ 
+ 
+                  <div class="btn-group dropend py-3">
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div><i class="bi bi-pencil-square"></i></div>             
+                      O
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li class="text-center">Оперативні</li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('dashboards/storagemap',{})">Зберігання газу</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/component4',{})">Обсяг вільн потужн</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/commerse',{})">Комерційна панорама</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/component3',{})">Порівняння споживання</button>                        
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropend py-3">
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div><i class="bi bi-p-circle"></i></div>             
+                      P
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li class="text-center">Режими</li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/tovregim',{})">Динаміка P</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/tovregmap',{})">Показники роботи</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/actgascharts',{})">Тех-акт газ графік</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/agsi',{})">AGSI</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/scada',{})">SCADA</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/component3',{})">Порівняння споживання</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/wheathermap',{})">Погода карта</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/wheathercharts',{})">Погода граф</button>                        
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropend py-3">
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div><i class="bi bi-bar-chart"></i></div>             
+                      З
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li class="text-center">Звіти</li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/seasonstats',{})">Сезони</button>                        
+                      </li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/fbgpic1',{})">ВТВ</button>                        
+                      </li>
+
+                    </ul>
+                  </div>
+                  <div class="btn-group dropend py-3">
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div><i class="bi bi-folder2"></i></div>             
+                      Н
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li class="text-center">Нормативна док.</li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/',{})"></button>                        
+                      </li>
+                    </ul>
+                  </div>
+
+
+
+                  <div class="btn-group-vertical btn-group-sm btn-group-justified py-3" role="group">
+                    <button type="button" class="btn btn-outline-primary mb-1">КІМ</button>
+                    <button type="button" class="btn btn-outline-success mb-1">ОАС</button>
+                    <button type="button" class="btn btn-outline-warning">АСК</button>  
+                  </div>
+
+                  <div class="btn-group-vertical btn-group-sm btn-group-justified py-3" role="group">
+                    <button *ngIf="!currentUser._id" type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/login',{})">
+                      <i class="bi bi-box-arrow-in-left"></i>Вхід
+                    </button>
+                    <button *ngIf="currentUser._id > 0" type="button" class="btn btn-outline-primary mb-1" (click)="singOut()">
+                      <i class="bi bi-box-arrow-in-right"></i>Вийти
+                    </button>
+                  </div>
+
+                  <img class="nav-item py-3" src="/assets/brand-34x34.png" width="60" />
+
+                </ul>
+                
+
+                 
+            </div>
+
+        <div class="col d-flex flex-column h-sm-100 main">
+            <main class="row overflow-auto">
+              <router-outlet></router-outlet>
+            </main>
+
+            <div id="spinner" class="spinner-border text-primary" role="status" *ngIf="(loader$ | async)">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
+        </div>       
+    </div>
+</div>
+
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas1" aria-labelledby="offcanvasExampleLabel" >
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+
+        <div *ngIf="currentUser._id">
+            <ngb-datepicker [(ngModel)]="selectedDay" (dateSelect)="clickSelectDay($event)"></ngb-datepicker>
+        </div>
+
+        <div>
+          <div class="btn-group-vertical btn-group-sm btn-group-justified py-3" role="group">
+            <button *ngIf="!currentUser._id" type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/login',{})">
+              <i class="bi bi-box-arrow-in-left"></i><span class="ps-2">{{ currentUser.name }}</span>
+            </button>
+            <button *ngIf="currentUser._id > 0" type="button" class="btn btn-outline-primary mb-1" (click)="singOut()">
+              <span class="pe-2">{{ currentUser.name }} : Вийти</span><i class="bi bi-box-arrow-in-right"></i>
+            </button>
+          </div>          
+        </div>
+
+
+        <div class="btn-group  py-2">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            O
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('dashboards/storagemap',{})">Зберігання газу</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/component4',{})">Обсяг вільн потужн</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/commerse',{})">Комерційна панорама</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/component3',{})">Порівняння споживання</button>                        
+            </li>
+          </ul>
+        </div>
+        <div class="btn-group  py-2">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Р
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/tovregim',{})">Динаміка P</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/tovregmap',{})">Показники роботи</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/actgascharts',{})">Тех-акт газ графік</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/agsi',{})">AGSI</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/scada',{})">SCADA</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/component3',{})">Порівняння споживання</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/wheathermap',{})">Погода карта</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/wheathercharts',{})">Погода граф</button>                        
+            </li>
+          </ul>
+        </div>
+        <div class="btn-group  py-2">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            З
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/seasonstats',{})">Сезони</button>                        
+            </li>
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/dashboards/fbgpic1',{})">ВТВ</button>                        
+            </li>
+
+          </ul>
+        </div>
+        <div class="btn-group  py-2">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            H
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button type="button" class="btn btn-outline-primary mb-1" (click)="onNavigate('/',{})"></button>                        
+            </li>
+
+
+          </ul>
+        </div>
+
+
+
+    </div>
+</div>
+

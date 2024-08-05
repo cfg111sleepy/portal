@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Інформаційний портал ДД ОГСУ</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">  
+
+  <script type="text/javascript">
+    
+    document.addEventListener('load', function() {
+    var scale = 1 / (window.devicePixelRatio || 1);
+    var content = 'width=device-width, initial-scale=' + scale;
+
+    document.querySelector('meta[name="viewport"]').setAttribute('content', content)
+    }, false);
+
+  </script>
+
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+</html>
