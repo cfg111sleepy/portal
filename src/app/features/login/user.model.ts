@@ -13,7 +13,7 @@ export interface User {
     name: string;
     role?:   number;
     profile?:  number;
-    is_domain?:boolean;
+    is_domain?:  boolean;
     login?:    string;
     password?: string;
     roleName?:   string;

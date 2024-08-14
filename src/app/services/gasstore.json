@@ -1,0 +1,402 @@
+{
+    "skip": 0,
+    "limit": "150",
+    "total": 13,
+    "data": [
+        {
+            "ks": [
+                {
+                    "ceh": 905022,
+                    "total_gpa": 0,
+                    "work_gpa": 0,
+                    "reserv_gpa": 0,
+                    "repair_gpa": 0
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee71",
+            "object": 905032,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.616Z",
+            "name": "ПСГ Вергунське",
+            "repair_gpa": 0,
+            "reserv_gpa": 0,
+            "state": "Закачка",
+            "state_ts": "2014-09-08T11:00:00.000Z",
+            "total_gpa": 0,
+            "updated_at": "2024-08-13T03:30:00.364Z",
+            "value": 1,
+            "work_gpa": 0
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 903017,
+                    "total_gpa": 8,
+                    "work_gpa": 2,
+                    "reserv_gpa": 3,
+                    "repair_gpa": 3
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee73",
+            "object": 903031,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.644Z",
+            "name": "ПСГ Богородчанське",
+            "repair_gpa": 3,
+            "reserv_gpa": 3,
+            "state": "Закачка",
+            "state_ts": "2024-04-08T04:00:00.000Z",
+            "total_gpa": 8,
+            "updated_at": "2024-08-13T03:30:00.375Z",
+            "value": 1,
+            "work_gpa": 2
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 906011,
+                    "total_gpa": 20,
+                    "work_gpa": 0,
+                    "reserv_gpa": 17,
+                    "repair_gpa": 3
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee75",
+            "object": 906023,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.652Z",
+            "name": "ПСГ Угерське",
+            "repair_gpa": 3,
+            "reserv_gpa": 17,
+            "state": "Закачка",
+            "state_ts": "2024-04-08T16:40:00.000Z",
+            "total_gpa": 20,
+            "updated_at": "2024-08-13T03:30:00.382Z",
+            "value": 1,
+            "work_gpa": 0
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 902013,
+                    "total_gpa": 3,
+                    "work_gpa": 1,
+                    "reserv_gpa": 1,
+                    "repair_gpa": 1
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee77",
+            "object": 902031,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.660Z",
+            "name": "ПСГ Пролетарське",
+            "repair_gpa": 1,
+            "reserv_gpa": 1,
+            "state": "Закачка",
+            "state_ts": "2024-04-16T14:00:00.000Z",
+            "total_gpa": 3,
+            "updated_at": "2024-08-13T03:30:00.390Z",
+            "value": 1,
+            "work_gpa": 1
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 906012,
+                    "total_gpa": 12,
+                    "work_gpa": 4,
+                    "reserv_gpa": 7,
+                    "repair_gpa": 1
+                },
+                {
+                    "ceh": 906013,
+                    "total_gpa": 4,
+                    "work_gpa": 1,
+                    "reserv_gpa": 1,
+                    "repair_gpa": 2
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee79",
+            "object": 906021,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.672Z",
+            "name": "ПСГ Опарське",
+            "repair_gpa": 3,
+            "reserv_gpa": 8,
+            "state": "Закачка",
+            "state_ts": "2024-04-27T04:00:00.000Z",
+            "total_gpa": 16,
+            "updated_at": "2024-08-13T03:30:00.397Z",
+            "value": 1,
+            "work_gpa": 5
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 905021,
+                    "total_gpa": 3,
+                    "work_gpa": 0,
+                    "reserv_gpa": 3,
+                    "repair_gpa": 0
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee7b",
+            "object": 905031,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.682Z",
+            "name": "ПСГ Краснопопівське",
+            "repair_gpa": 0,
+            "reserv_gpa": 3,
+            "state": "Відбoр",
+            "state_ts": "2023-11-06T21:00:00.000Z",
+            "total_gpa": 3,
+            "updated_at": "2024-08-13T03:30:00.404Z",
+            "value": 2,
+            "work_gpa": 0
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 906015,
+                    "total_gpa": 6,
+                    "work_gpa": 0,
+                    "reserv_gpa": 0,
+                    "repair_gpa": 6
+                },
+                {
+                    "ceh": 906016,
+                    "total_gpa": 3,
+                    "work_gpa": 0,
+                    "reserv_gpa": 0,
+                    "repair_gpa": 3
+                },
+                {
+                    "ceh": 906017,
+                    "total_gpa": 2,
+                    "work_gpa": 0,
+                    "reserv_gpa": 0,
+                    "repair_gpa": 2
+                },
+                {
+                    "ceh": 906018,
+                    "total_gpa": 3,
+                    "work_gpa": 0,
+                    "reserv_gpa": 0,
+                    "repair_gpa": 3
+                },
+                {
+                    "ceh": 906019,
+                    "total_gpa": 4,
+                    "work_gpa": 0,
+                    "reserv_gpa": 1,
+                    "repair_gpa": 3
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee7f",
+            "object": 906024,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.703Z",
+            "name": "ПСГ Б-В-У, Б-В поклад",
+            "repair_gpa": 17,
+            "reserv_gpa": 1,
+            "state": "Закачка",
+            "state_ts": "2024-05-19T21:00:00.000Z",
+            "total_gpa": 18,
+            "updated_at": "2024-08-13T03:30:00.416Z",
+            "value": 1,
+            "work_gpa": 0
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 906015,
+                    "total_gpa": 6,
+                    "work_gpa": 0,
+                    "reserv_gpa": 0,
+                    "repair_gpa": 6
+                },
+                {
+                    "ceh": 906016,
+                    "total_gpa": 3,
+                    "work_gpa": 0,
+                    "reserv_gpa": 0,
+                    "repair_gpa": 3
+                },
+                {
+                    "ceh": 906017,
+                    "total_gpa": 2,
+                    "work_gpa": 0,
+                    "reserv_gpa": 0,
+                    "repair_gpa": 2
+                },
+                {
+                    "ceh": 906018,
+                    "total_gpa": 3,
+                    "work_gpa": 0,
+                    "reserv_gpa": 0,
+                    "repair_gpa": 3
+                },
+                {
+                    "ceh": 906019,
+                    "total_gpa": 4,
+                    "work_gpa": 0,
+                    "reserv_gpa": 1,
+                    "repair_gpa": 3
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee81",
+            "object": 906036,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.718Z",
+            "name": "ПСГ Б-В-У, Угерський поклад",
+            "repair_gpa": 17,
+            "reserv_gpa": 1,
+            "state": "Закачка",
+            "state_ts": "2024-05-19T21:00:00.000Z",
+            "total_gpa": 18,
+            "updated_at": "2024-08-13T03:30:00.423Z",
+            "value": 1,
+            "work_gpa": 0
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 901025,
+                    "total_gpa": 7,
+                    "work_gpa": 0,
+                    "reserv_gpa": 7,
+                    "repair_gpa": 0
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee83",
+            "object": 901033,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.731Z",
+            "name": "ПСГ Олишівське",
+            "repair_gpa": 0,
+            "reserv_gpa": 7,
+            "state": "Відбoр",
+            "state_ts": "2021-09-30T21:00:00.000Z",
+            "total_gpa": 7,
+            "updated_at": "2024-08-13T03:30:00.431Z",
+            "value": 2,
+            "work_gpa": 0
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 901024,
+                    "total_gpa": 10,
+                    "work_gpa": 8,
+                    "reserv_gpa": 2,
+                    "repair_gpa": 0
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee86",
+            "object": 901031,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.750Z",
+            "name": "ПСГ Солохівське",
+            "repair_gpa": 0,
+            "reserv_gpa": 2,
+            "state": "Закачка",
+            "state_ts": "2024-04-15T05:00:00.000Z",
+            "total_gpa": 10,
+            "updated_at": "2024-08-13T03:30:00.445Z",
+            "value": 1,
+            "work_gpa": 8
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 906014,
+                    "total_gpa": 6,
+                    "work_gpa": 0,
+                    "reserv_gpa": 6,
+                    "repair_gpa": 0
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee8a",
+            "object": 906022,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.761Z",
+            "name": "ПСГ Дашавське",
+            "repair_gpa": 0,
+            "reserv_gpa": 6,
+            "state": "Закачка",
+            "state_ts": "2024-04-15T05:00:00.000Z",
+            "total_gpa": 6,
+            "updated_at": "2024-08-13T03:30:00.456Z",
+            "value": 1,
+            "work_gpa": 0
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 901023,
+                    "total_gpa": 3,
+                    "work_gpa": 0,
+                    "reserv_gpa": 2,
+                    "repair_gpa": 1
+                },
+                {
+                    "ceh": 901026,
+                    "total_gpa": 1,
+                    "work_gpa": 0,
+                    "reserv_gpa": 1,
+                    "repair_gpa": 0
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee91",
+            "object": 901032,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.772Z",
+            "name": "ПСГ Мринське",
+            "repair_gpa": 1,
+            "reserv_gpa": 3,
+            "state": "Закачка",
+            "state_ts": "2024-04-08T12:15:00.000Z",
+            "total_gpa": 4,
+            "updated_at": "2024-08-13T03:30:00.468Z",
+            "value": 1,
+            "work_gpa": 0
+        },
+        {
+            "ks": [
+                {
+                    "ceh": 902014,
+                    "total_gpa": 3,
+                    "work_gpa": 1,
+                    "reserv_gpa": 1,
+                    "repair_gpa": 1
+                }
+            ],
+            "_id": "66b98fcd5aa374ddfac5ee98",
+            "object": 902032,
+            "time_stamp": "2024-08-12T04:00:00.000Z",
+            "__v": 0,
+            "created_at": "2024-08-12T04:30:05.783Z",
+            "name": "ПСГ Кегичівське",
+            "repair_gpa": 1,
+            "reserv_gpa": 1,
+            "state": "Закачка",
+            "state_ts": "2024-04-11T04:00:00.000Z",
+            "total_gpa": 3,
+            "updated_at": "2024-08-13T03:30:00.481Z",
+            "value": 1,
+            "work_gpa": 1
+        }
+    ]
+}

@@ -1,697 +1,270 @@
-<div class="container mt-3">
-    <div class="table-responsive">
-        <table class="table table-bordered">
-            <!-- 1 -->
-            <tr>
-                <td>
-                    <app-psg-park-gpa [data]="stores" [key]="906023">УГЕРСЬКЕ</app-psg-park-gpa>
-                </td>
-                <td colspan="2">
-                    <app-psg-park-gpa [data]="stores" [key]="906024">БІЛЬЧЕ-ВОЛИЦЬКО-УГЕРСЬКЕ</app-psg-park-gpa>
-                </td>
-                <td>
-                    <app-psg-park-gpa [data]="stores" [key]="906022">ДАШАВСЬКЕ</app-psg-park-gpa>
-                </td>
-                <td colspan="2">
-                    <app-psg-park-gpa [data]="stores" [key]="906021">ОПАРСЬКЕ</app-psg-park-gpa>
-                </td>
-                <td>
-                    <app-psg-park-gpa [data]="stores" [key]="903031">БОГОРОДЧАНСЬКЕ</app-psg-park-gpa>
-                </td>
-                <td>
-                    <app-psg-park-gpa [data]="stores" [key]="901032">МРИНСЬКЕ</app-psg-park-gpa>
-                </td>
-                <td>
-                    <app-psg-park-gpa [data]="stores" [key]="902031">ПРОЛЕТАРСЬКЕ</app-psg-park-gpa>
-                </td>
-            </tr>
-            <!-- 2 -->
-            <tr>
-                <td>
+<div class="container position-fixed rounded-3" style="z-index: 5;">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ГПА
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/dashboards/resource-gpa#tab1">УГЕРСЬКЕ</a></li>
+                  <li><a class="dropdown-item" href="/dashboards/resource-gpa#tab2">БІЛЬЧЕ-ВОЛИЦЬКО-УГЕРСЬКЕ</a></li>
+                  <li><a class="dropdown-item" href="/dashboards/resource-gpa#tab3">ДАШАВСЬКЕ</a></li>
+                  <li><a class="dropdown-item" href="/dashboards/resource-gpa#tab4">ОПАРСЬКЕ</a></li>
+                  <li><a class="dropdown-item" href="/dashboards/resource-gpa#tab5">БОГОРОДЧАНСЬКЕ</a></li>
+                  <li><a class="dropdown-item" href="/dashboards/resource-gpa#tab6">МРИНСЬКЕ</a></li>
+                  <li><a class="dropdown-item" href="/dashboards/resource-gpa#tab7">ПРОЛЕТАРСЬКЕ</a></li>
+                  <li><a class="dropdown-item" href="/dashboards/resource-gpa#tab8">СОЛОХІВСЬКЕ</a></li>
+                  <li><a class="dropdown-item" href="/dashboards/resource-gpa#tab9">КЕГИЧІВСЬКЕ</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                    [checked]="!D_N_Switch" (click)="toggle_D_N()">
+                <label class="btn btn-outline-primary" for="btnradio1">Двигун</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"
+                    [checked]="D_N_Switch" (click)="toggle_D_N()">
+                <label class="btn btn-outline-primary" for="btnradio2">Нагнітач</label>
+            </div>
+          </div>
+        </div>
+      </nav>
+</div>
+<div class="container mt-5">
+    <div class="table table-bordered">
+        <div name="tab1" id="tab1">
+            <div class="w-100">
+                <app-psg-park-gpa [data]="stores" [key]="906023">УГЕРСЬКЕ</app-psg-park-gpa>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <div class="w-50">
                     <div class="header card">КЦ-1</div>
-                </td>
-                <td>
-                    <div class="header card">КЦ-1</div>
-                </td>
-                <td>
-                    <div class="header card">КЦ-1A</div>
-                </td>
-                <td>
-                    <div class="header card">КЦ-1</div>
-                </td>
-                <td colspan="2">
-                    <div class="header card">КЦ-1</div>
-                </td>
-                <td>
-                    <div class="header card">КЦ-1</div>
-                </td>
-                <td>
-                    <div class="header card">КЦ-2</div>
-                </td>
-                <td>
-                    <div class="header card">КЦ-1</div>
-                </td>
-            </tr>
-            <!-- 3 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002221" [eng_comp]="D_N_Switch"
-                        [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002241" [eng_comp]="D_N_Switch"
-                        [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002271" [eng_comp]="D_N_Switch"
-                        [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002321" [eng_comp]="D_N_Switch"
-                        [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002292" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002299" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="3002391" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002454" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="2002301" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-            </tr>
-            <!-- 4 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002222" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002242" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002272" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002322" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002293" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002300" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="3002392" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002455" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="2002302" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-            </tr>
-            <!-- 5 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002223" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002243" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002273" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002323" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002294" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002301" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="3002393" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002456" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="2002303" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-            </tr>
-            <!-- 6 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002224" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002244" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002274" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002324" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002296" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002302" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="3002395" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 7 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002225" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002245" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <div>
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
-                                [checked]="!D_N_Switch" (click)="toggle_D_N()">
-                            <label class="btn btn-outline-primary" for="btnradio1">Двигун</label>
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"
-                                [checked]="D_N_Switch" (click)="toggle_D_N()">
-                            <label class="btn btn-outline-primary" for="btnradio2">Нагнітач</label>
-                        </div>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002221" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002222" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002223" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002224" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002225" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002226" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002227" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002228" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002229" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002230" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
                     </div>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002325" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002298" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002303" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-psg-park-gpa [data]="stores" [key]="901031">СОЛОХІВСЬКЕ</app-psg-park-gpa>
-                </td>
-                <td>
-                    <app-psg-park-gpa [data]="stores" [key]="902032">КЕГИЧІВСЬКЕ</app-psg-park-gpa>
-                </td>
-            </tr>
-            <!-- 8 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002226" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002246" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002326" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002304" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
+                </div>
+                <div class="w-50">
                     <div class="header card">КЦ-2</div>
-                </td>
-                <td>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002231" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002232" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002233" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002234" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002235" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002236" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002237" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002238" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002239" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002240" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div name="tab2" id="tab2">
+            <div class="w-100">
+                <app-psg-park-gpa [data]="stores" [key]="906024">БІЛЬЧЕ-ВОЛИЦЬКО-УГЕРСЬКЕ</app-psg-park-gpa>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <div class="">
                     <div class="header card">КЦ-1</div>
-                </td>
-                <td>
-                    <div class="header card">КЦ-1</div>
-                </td>
-            </tr>
-            <!-- 9 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002227" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002247" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002305" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="3002397" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002401" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="2002311" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-            </tr>
-            <!-- 10 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002228" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002248" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
+                    <div class="d-flex justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002241" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002242" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002243" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002244" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002245" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002246" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002247" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002248" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="header card">КЦ-1A</div>
+                    <div class="d-flex justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002271" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002272" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002273" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002274" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+                <div class="">
                     <div class="header card">КЦ-2</div>
-                </td>
-                <td>
+                    <div class="d-flex justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
 
-                </td>
-                <td colspan="2">
-                    <div class="header card">КЦ-2</div>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="3002398" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002402" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="2002312" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-            </tr>
-            <!-- 11 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002229" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
+                    </div>
+                </div>
+                <div class="">
                     <div class="header card">КЦ-3</div>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002311" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002313" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="3002399" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002403" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="2002313" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-            </tr>
-            <!-- 12 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002230" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002261" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002252" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002312" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002314" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="3002400" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002404" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 13 -->
-            <tr>
-                <td>
-                    <div class="header card">КЦ-2</div>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002262" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002253" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002405" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 14 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002231" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002263" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002254" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002406" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 15 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002232" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002264" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002255" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002407" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 16 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002233" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002265" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002256" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002408" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 17 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002234" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
+                    <div class="d-flex justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+                <div class="">
                     <div class="header card">КЦ-4</div>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002409" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 18 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002235" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002281" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="1002410" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 19 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002236" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002282" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 20 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002237" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002283" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 21 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002238" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002284" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 22 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002239" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002285" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-            </tr>
-            <!-- 23 -->
-            <tr>
-                <td>
-                    <app-gpa-to-cp-kp [data]="aggregs" [key]="6002240" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-                <td>
-
-                </td>
-            </tr>
-        </table>
+                    <div class="БІЛЬЧЕd-flex justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002251" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="tab3" id="tab3">
+            <div class="w-100">
+                <app-psg-park-gpa [data]="stores" [key]="906022">ДАШАВСЬКЕ</app-psg-park-gpa>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <div class="w-100">
+                    <div class="header card">КЦ-1</div>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002221" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002222" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002223" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002224" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="tab4" id="tab4">
+            <div class="w-100">
+                <app-psg-park-gpa [data]="stores" [key]="906021">ОПАРСЬКЕ</app-psg-park-gpa>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <div class="w-50">
+                    <div class="header card">КЦ-1</div>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002221" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002222" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002223" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002224" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002225" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002226" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002227" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002228" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002229" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002230" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+                <div class="w-50">
+                    <div class="header card">КЦ-2</div>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002231" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002232" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002233" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002234" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="tab5" id="tab5">
+            <div class="w-100">
+                <app-psg-park-gpa [data]="stores" [key]="903031">БОГОРОДЧАНСЬКЕ</app-psg-park-gpa>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <div class="w-50">
+                    <div class="header card">КЦ-1</div>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002221" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002222" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002223" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002224" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+                <div class="w-50">
+                    <div class="header card">КЦ-2</div>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002231" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002232" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002233" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002234" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="tab6" id="tab6">
+            <div class="w-100">
+                <app-psg-park-gpa [data]="stores" [key]="901032">МРИНСЬКЕ</app-psg-park-gpa>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <div class="w-100">
+                    <div class="header card">КЦ-2</div>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002231" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002232" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002233" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="tab7" id="tab7">
+            <div class="w-100">
+                <app-psg-park-gpa [data]="stores" [key]="902031">ПРОЛЕТАРСЬКЕ</app-psg-park-gpa>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <div class="w-100">
+                    <div class="header card">КЦ-1</div>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002231" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002232" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002233" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="tab8" id="tab8">
+            <div class="w-100">
+                <app-psg-park-gpa [data]="stores" [key]="901031">СОЛОХІВСЬКЕ</app-psg-park-gpa>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <div class="w-100">
+                    <div class="header card">КЦ-1</div>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002231" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002232" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002233" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002231" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002232" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002233" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002233" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="tab9" id="tab9">
+            <div class="w-100">
+                <app-psg-park-gpa [data]="stores" [key]="902032">КЕГИЧІВСЬКЕ</app-psg-park-gpa>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <div class="w-100">
+                    <div class="header card">КЦ-1</div>
+                    <div class="d-flex w-100 justify-content-center align-items-center flex-wrap">
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002231" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002232" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                        <app-gpa-to-cp-kp [data]="aggregs" [key]="6002233" [eng_comp]="D_N_Switch"></app-gpa-to-cp-kp>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

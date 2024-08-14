@@ -34,7 +34,7 @@ export class UserEffects {
         exhaustMap(action =>
           this.userService.whoami().pipe(
             map(currentUser =>  userActions.loginOk({ currentUser })),
-            catchError(error => of(userActions.loginFail({ error })))
+            // catchError(error => of(userActions.loginFail({ error })))
           )
         )
         // Errors are handled and it is safe to disable resubscription

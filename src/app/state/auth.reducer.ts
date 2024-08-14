@@ -6,9 +6,14 @@ import * as user1Actions from './user.actions';
 import { AppState, User } from '../features/login/user.model';
 
 const guest: User = {
-  _id: 0,
-  name: "Гість"
-};
+  is_domain: true,
+  _id: 30,
+  name: "Звагольський Ігор Валерійович",
+  login: "zvaholskyi-iv@utg.ua",
+  role: 1,
+  profile: 1,
+  __v: 2
+}
 
 export const initialState: AppState = {
   currentUser: guest,
