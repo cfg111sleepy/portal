@@ -21,6 +21,88 @@ export class Component5Component implements OnInit, OnDestroy {
   constructor(private store: Store, private calendar: NgbCalendar) {   
   }
 
+  loading: boolean = false;
+
+  isHH: boolean = true;
+  isDD: boolean = false;
+
+  forecastData: ForecastRow[] = Array.from({ length: 24 }, (_, i) => {
+    const getRandom = (min: number, max: number, decimals: number = 3) => 
+      (Math.random() * (max - min) + min).toFixed(decimals);
+    
+    return {
+      hour: `${i.toString().padStart(2, '0')}:00`,
+      d_4: Math.floor(Math.random() * 30 + 10),
+      d_3: Math.floor(Math.random() * 30 + 10),
+      d_2: Math.floor(Math.random() * 30 + 10),
+      d_1: Math.floor(Math.random() * 30 + 10),
+      d: Math.floor(Math.random() * 30 + 10),
+  
+      d_4s: getRandom(1000, 3000),
+      d_3s: getRandom(1000, 3000),
+      d_2s: getRandom(1000, 3000),
+      d_1s: getRandom(1000, 3000),
+      ds: getRandom(1000, 1500),
+  
+      k: Math.floor(Math.random() * 300),
+      ks: getRandom(0.5, 1),
+  
+      f: Math.floor(Math.random() * 100),
+      d_f: getRandom(1000, 1500),
+      
+      time_stamp: new Date(`2024-09-24T${i.toString().padStart(2, '0')}:00:00`)
+    };
+  });
+
+  setTableHH() :void {
+    this.loading = true; // Показуємо лоадер
+    setTimeout(() => {
+      this.forecastData = this.generateForecastData();
+      this.loading = false; // Ховаємо лоадер після завершення перерахунку
+      this.isHH = true;
+      this.isDD = false;
+    }, 1000); // Затримка в 1 секунду
+  }
+
+  setTableDD() :void {
+    this.loading = true; // Показуємо лоадер
+    setTimeout(() => {
+      this.forecastData = this.generateForecastData();
+      this.loading = false; // Ховаємо лоадер після завершення перерахунку
+      this.isHH = false;
+      this.isDD = true;
+    }, 1000); // Затримка в 1 секунду
+  }
+  forecastDataDD = this.forecastData.splice(0, 8)
+  // recalculateForecastData(): ForecastRow[] {
+  //   const getRandom = (min: number, max: number, decimals: number = 3) => 
+  //     (Math.random() * (max - min) + min).toFixed(decimals);
+    
+  //   return this.forecastData.map((row, i) => ({
+  //     ...row,
+  //     d_4: Math.floor(Math.random() * 30 + 10),
+  //     d_3: Math.floor(Math.random() * 30 + 10),
+  //     d_2: Math.floor(Math.random() * 30 + 10),
+  //     d_1: Math.floor(Math.random() * 30 + 10),
+  //     d: Math.floor(Math.random() * 30 + 10),
+  
+  //     d_4s: getRandom(1000, 3000),
+  //     d_3s: getRandom(1000, 3000),
+  //     d_2s: getRandom(1000, 3000),
+  //     d_1s: getRandom(1000, 3000),
+  //     ds: getRandom(1000, 1500),
+  
+  //     k: Math.floor(Math.random() * 300),
+  //     ks: getRandom(0.5, 1),
+  
+  //     f: Math.floor(Math.random() * 100),
+  //     d_f: getRandom(1000, 1500),
+  
+  //     // Оновлюємо час за тим самим індексом години
+  //     time_stamp: new Date(`2024-09-24T${i.toString().padStart(2, '0')}:00:00`)
+  //   }));
+  // }
+
   consume_title:string = `Споживання за добу, тис м\u00B3`;
   t_title:string = `Т повітря середня, \u2103`;
 
@@ -54,6 +136,9 @@ export class Component5Component implements OnInit, OnDestroy {
 
   lineMap: Map<string, LineModel> =  new Map<string, LineModel>();
   lineMap1: Map<string, LineModel> =  new Map<string, LineModel>();//wheTHER
+
+//-------------------------------------------
+
 
 //-------------------------------------------
 
@@ -171,6 +256,9 @@ diffAverage: number = 0;
   });
 
   ngOnInit(): void {
+
+    this.forecastData = this.generateForecastData();
+
     let today = this.calendar.getToday();
     this.selectedDay = today;
 
@@ -195,6 +283,45 @@ diffAverage: number = 0;
 
 
     this.fkOnInit();
+  }
+
+  generateForecastData(): ForecastRow[] {
+    return Array.from({ length: 24 }, (_, i) => {
+      const getRandom = (min: number, max: number, decimals: number = 3) =>
+        (Math.random() * (max - min) + min).toFixed(decimals);
+
+      return {
+        hour: `${i.toString().padStart(2, '0')}:00`,
+        d_4: Math.floor(Math.random() * 30 + 10),
+        d_3: Math.floor(Math.random() * 30 + 10),
+        d_2: Math.floor(Math.random() * 30 + 10),
+        d_1: Math.floor(Math.random() * 30 + 10),
+        d: Math.floor(Math.random() * 30 + 10),
+
+        d_4s: getRandom(1000, 3000),
+        d_3s: getRandom(1000, 3000),
+        d_2s: getRandom(1000, 3000),
+        d_1s: getRandom(1000, 3000),
+        ds: getRandom(1000, 1500),
+
+        k: Math.floor(Math.random() * 300),
+        ks: getRandom(0.5, 1),
+
+        f: Math.floor(Math.random() * 100),
+        d_f: getRandom(1000, 1500),
+
+        time_stamp: new Date(`2024-09-24T${i.toString().padStart(2, '0')}:00:00`)
+      };
+    });
+  }
+
+  // Метод для перерахунку прогнозу
+  recalculate(): void {
+    this.loading = true; // Показуємо лоадер
+    setTimeout(() => {
+      this.forecastData = this.generateForecastData();
+      this.loading = false; // Ховаємо лоадер після завершення перерахунку
+    }, 1000); // Затримка в 1 секунду
   }
 
   ngOnDestroy() {

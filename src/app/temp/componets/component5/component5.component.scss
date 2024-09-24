@@ -10,3 +10,33 @@ th {
     border-width: 1px;
     border-color: black;
 }
+
+.wrapper-graphic {
+    background-color: rgb(161, 180, 190);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.btn-some-class {
+    width: 40%;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.btn-second-class {
+    height: 25px;
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+    background-color: rgb(161, 180, 190);
+}
+
+.some-table {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.loading-container {
+    height: 740px;
+}

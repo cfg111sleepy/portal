@@ -17,6 +17,7 @@ export class UserService {
   }
 
   whoami() : Observable<User> {
+    // return this.http.get<User>(environment.apiBaseUrl + `/auth/whoami`, { withCredentials: true });
     return this.http.get<User>('./who.json');
   }
 

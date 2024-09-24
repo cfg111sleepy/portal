@@ -11,14 +11,14 @@ import { GasStoreResp } from '../models/gas-stores';
 export class AggregateGasStoreService {
   constructor(private http: HttpClient) {}
  
-  getAllGasStoresState(iso_ts : string) {
-    // return fetch('./gasstore.json').then(res => res.json()).then(data => data.data);
-    return this.http.get<GasStoreResp>('./gasstore.json');
+  getAllGasStoresState(iso_ts : string): Observable<GasStoreResp>  {
+    return this.http.get<GasStoreResp>(environment.apiBaseUrl + `/gasstores?time_stamp=${iso_ts}&limit=150`, { withCredentials: true });
+    // return this.http.get<GasStoreResp>('./gasstore.json');
   }
 
-  getAllAggregatesState(iso_ts : string) {
-    // return fetch('./aggregates.json').then(res => res.json()).then(data => data.data);
-    return this.http.get<AggregateResp>('./aggregates.json');
+  getAllAggregatesState(iso_ts : string): Observable<AggregateResp> {
+    return this.http.get<AggregateResp>(environment.apiBaseUrl + `/aggregates?time_stamp=${iso_ts}&limit=150`, { withCredentials: true });
+    // return this.http.get<AggregateResp>('./aggregates.json');
   }
 
 }

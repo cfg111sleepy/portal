@@ -1,1 +1,32 @@
-<p>flow-forecast-dd works!</p>
+<table class="table table-sm table-bordered table-striped">
+    <thead class="table-wrapper">
+        <tr>
+            <th>Лінія</th>
+            <th>Дата</th>
+            <th>Споживання ГРС ТОВ ОГТСУ тис. м3</th>
+            <th>Д тис. м3</th>
+            <th>Споживання Україна Загальне тис. м3</th>
+            <th>Видобуток газу Україна тис. м3</th>
+            <th>Зміна МС тис. м3</th>
+            <th>Зміна ПСГ (фіз баланс) тис. м3</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rows let i=index">
+            <td [style.backgroundColor]="data[i].color"></td>
+            <td>{{addDays(i+1)}}</td>
+            <td>{{row.d_2s}}</td>
+            <td>{{row.d_1s}}</td>
+            <td>{{row.ds}}</td>
+            <td>{{row.ks}}</td>
+            <td>{{row.d_f}}</td>
+            <td>{{row.d_f}}</td>
+            <td>
+              <button class="btn btn-sm">
+                <i class="bi bi-x"></i> <!-- Іконка хрестика -->
+              </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

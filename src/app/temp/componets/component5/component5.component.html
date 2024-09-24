@@ -16,28 +16,57 @@
             </div>
         </div>
         <div class="col-lg-10 col-sm-12">
-            <div class="header">СПОЖИВАННЯ ГАЗУ В УКРАЇНІ</div>
+            <div class="header">Прогноз Споживання</div>
         </div>
     </div>
 
-    <div class="row p-4">
+    <div class="d-flex">
         
-        <div class="col-xxl-4 col-lg-6  col-sm-12 col-xs-12">        
+        <div class="wrapper-graphic w-50 m-2">        
             <app-day-add-xlines-chart-component [data]="lines" [title]="title" ></app-day-add-xlines-chart-component>    
             <app-day-add-xlines-chart-component [data]="lines1" [title]="title1" ></app-day-add-xlines-chart-component>
             <br>
-            <app-regions-consume-table (regionChanged)="regionChanged($event)"></app-regions-consume-table>    
+            <!-- <app-regions-consume-table (regionChanged)="regionChanged($event)"></app-regions-consume-table>     -->
         </div>
         
-        <div class="col-xxl-4 col-lg-6  col-sm-12 col-xs-12">
-            <app-flow-forecast [rows]="rows" [totals]="totals" [totals1]="totals1" 
-                [currentGasDay]="currentGasDay" [gasDay_1]="gasDay_1" [gasDay_2]="gasDay_2" [gasDay_3]="gasDay_3">
-            </app-flow-forecast>
+        <div class="w-50 m-2">
+            <div class="d-flex justify-content-between mb-2">
+                <button (click)="setTableHH()" [ngClass]="{'active': isHH}" class="btn btn-some-class btn-outline-secondary m-1">Годинні дані</button>
+                <button (click)="setTableDD()" [ngClass]="{'active': isDD}" class="btn btn-some-class btn-outline-secondary m-1">Добові дані</button>
+                <button class="btn btn-some-class btn-outline-secondary m-1">Баланс</button>
+            </div>
+            <div *ngIf="isHH" class="some-table">
+                <div *ngIf="loading" class="loading-container d-flex justify-content-center align-items-center">
+                  <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+                    <span class="visually-hidden">Завантаження...</span>
+                  </div>
+                </div>
+                <app-flow-forecast *ngIf="!loading" [rows]="forecastData" [totals]="totals" [totals1]="totals1" 
+                    [currentGasDay]="currentGasDay" [gasDay_1]="gasDay_1" [gasDay_2]="gasDay_2" [gasDay_3]="gasDay_3">
+                </app-flow-forecast>
+            </div>
+            <div *ngIf="isDD" class="some-table">
+                <div *ngIf="loading" class="loading-container d-flex justify-content-center align-items-center">
+                  <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+                    <span class="visually-hidden">Завантаження...</span>
+                  </div>
+                </div>
+                <app-flow-forecast-dd [rows]="forecastDataDD"></app-flow-forecast-dd>
+            </div>
+            <div *ngIf="isDD" class="some-table mt-5">
+                <app-regions-consume-table></app-regions-consume-table>
+            </div>
+            <div *ngIf="isHH" class="d-flex justify-content-between mt-2">
+                <button (click)="recalculate()" class="btn btn-second-class btn-outline-secondary">Центральний регіон</button>
+                <button (click)="recalculate()" class="btn btn-second-class btn-outline-secondary">Північний регіон</button>
+                <button (click)="recalculate()" class="btn btn-second-class btn-outline-secondary">Західний регіон</button>
+                <button (click)="recalculate()" class="btn btn-second-class btn-outline-secondary">Східний регіон</button>
+                <button (click)="recalculate()" class="btn btn-second-class btn-outline-secondary">Загалом</button>
+            </div>
         </div>
-
-        <div class="col-xxl-4 col-lg-6  col-sm-12 col-xs-12">
+        <!-- <div class="col-xxl-4 col-lg-6  col-sm-12 col-xs-12">
             <app-gas-consume-temperature (rowDeleting)="onDeleteRow($event)" [data]="consumeTemperatureMap"></app-gas-consume-temperature>
-        </div>
+        </div> -->
     </div>
     
 </div>
