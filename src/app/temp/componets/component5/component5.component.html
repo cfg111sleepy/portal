@@ -22,9 +22,13 @@
 
     <div class="d-flex">
         
-        <div class="wrapper-graphic w-50 m-2">        
-            <app-day-add-xlines-chart-component [data]="lines" [title]="title" ></app-day-add-xlines-chart-component>    
-            <app-day-add-xlines-chart-component [data]="lines1" [title]="title1" ></app-day-add-xlines-chart-component>
+        <div class="w-50 m-2">
+            <div class="wrapper-graphic mt-2">
+                <app-day-add-xlines-chart-component [data]="lines" [title]="title" ></app-day-add-xlines-chart-component>
+            </div>    
+            <div class="wrapper-graphic mt-2">
+                <app-day-add-xlines-chart-component [data]="lines1" [title]="title1" ></app-day-add-xlines-chart-component>
+            </div>
             <br>
             <!-- <app-regions-consume-table (regionChanged)="regionChanged($event)"></app-regions-consume-table>     -->
         </div>
@@ -34,6 +38,7 @@
                 <button (click)="setTableHH()" [ngClass]="{'active': isHH}" class="btn btn-some-class btn-outline-secondary m-1">Годинні дані</button>
                 <button (click)="setTableDD()" [ngClass]="{'active': isDD}" class="btn btn-some-class btn-outline-secondary m-1">Добові дані</button>
                 <button class="btn btn-some-class btn-outline-secondary m-1">Баланс</button>
+                <button class="btn btn-some-class btn-outline-secondary m-1">Exel</button>
             </div>
             <div *ngIf="isHH" class="some-table">
                 <div *ngIf="loading" class="loading-container d-flex justify-content-center align-items-center">
